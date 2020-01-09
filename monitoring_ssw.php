@@ -11,20 +11,20 @@
     <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
     </head>
     <body>
-	<table border=1>
+	<table border=1 id="simple-table" class="table  table-bordered table-hover">
 	
 		<tr>
-			<td>PID</td>
-			<td>Username</td>
-			<td>Application Name</td>
-			<td>Database</td>
-			<td>Client </td>
-			<td>Backend Start </td>
-			<td>Query Start </td>
-			<td>State Change </td>
-			<td>State</td>
-			<td>Query</td>
-			<td>Time Per Milliseconds</td>
+			<th class="detail-col">PID</th>
+			<th class="detail-col">Username</th>
+			<th class="detail-col">Application Name</th>
+			<th class="detail-col">Database</th>
+			<th class="detail-col">Client </th>
+			<th class="detail-col">Backend Start </th>
+			<th class="detail-col">Query Start </th>
+			<th class="detail-col">State Change </th>
+			<th class="detail-col">State</th>
+			<th class="detail-col">Query</th>
+			<th class="detail-col">Time Per Milliseconds</th>
 		</tr>
 		
 
