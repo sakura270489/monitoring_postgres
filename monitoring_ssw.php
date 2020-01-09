@@ -11,6 +11,24 @@
     <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
     </head>
     <body>
+	<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+						<ul class="breadcrumb">
+							<li>
+								<i class="ace-icon fa fa-home home-icon"></i>
+								<a href="#">Home</a>
+							</li>
+
+							<li>
+								<a href="#">Tables</a>
+							</li>
+							<li class="active">Simple &amp; Dynamic</li>
+						</ul><!-- /.breadcrumb -->
+	</div>
+	<div class="page-header">
+							<h1>
+								Monitoring SSW
+							</h1>
+						</div>
 	<table border=1 id="simple-table" class="table  table-bordered table-hover">
 	
 		<tr>
