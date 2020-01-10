@@ -43,6 +43,7 @@
 			<th class="detail-col">State</th>
 			<th class="detail-col">Query</th>
 			<th class="detail-col">Time Per Milliseconds</th>
+			<th class="detail-col">Action</th>
 		</tr>
 		
 
@@ -69,16 +70,23 @@
 			<td><?php echo $output[11];?></td>
 			<td><?php echo $output[7];?></td>
 			<td><?php echo $output[10];?></td>
+			<td><button class="btn btn-app btn-danger btn-sm" name="hapus" type="submit">
+					<i class="ace-icon fa fa-trash-o bigger-200"></i>
+					Delete
+				</button>
+			</td>
 		</tr>
 	
 
 
 <?php
 
-	/*$ir = "insert into mon_ssw (pid, database, username, client_addr, backend_start, wait_event_type, query, application_name, query_start, state_change) values ('".$output[0]."', '".$output[8]."', '".$output[1]."', '".$output[3]."', '".$output[4]."', '".$output[6]."', '".$output[7]."', '".$output[2]."', '".$output[5]."', '".$output[9]."')";
-	// echo $ir."<br>";
-	// var_dump($ir);
-	$resulti = pg_query($db_insert, $ir);*/
+	if($_POST['hapus']){
+		$yr = "select pg_terminate_backend(pid), query from pg_stat_activity where pid = ".$output[0]." and state = 'idle' and datname = current_database()";
+		// $te = pg_query($db_connection, $yr); 
+		// $iu = pg_fetch_row($te);
+		// pg_close($db_connection);
+	}
 		
 	}
 	
