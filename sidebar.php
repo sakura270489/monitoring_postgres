@@ -14,16 +14,16 @@
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-desktop"></i>
-              <span>UI Elements</span>
+              <span>SSW</span>
               </a>
             <ul class="sub">
-              <li><a href="home.php?halaman=monitoring_ssw">monitoring</a></li>
-              <li><a href="buttons.html">Buttons</a></li>
-              <li><a href="panels.html">Panels</a></li>
-              <li><a href="font_awesome.html">Font Awesome</a></li>
+              <li><a href="home.php?halaman=monitoring_ssw_realtime">Monitoring Real Time</a></li>
+              <li><a href="home.php?halaman=monitoring_ssw">Monitoring Aktifitas</a></li>
+              <li><a href="panels.html">Monitoring Size</a></li>
+              <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
             </ul>
           </li>
-          <li class="sub-menu">
+          <!-- <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-cogs"></i>
               <span>Components</span>
@@ -112,7 +112,7 @@
               <i class="fa fa-map-marker"></i>
               <span>Google Maps </span>
               </a>
-          </li>
+          </li> -->
         </ul>
         <!-- sidebar menu end-->
       </div>

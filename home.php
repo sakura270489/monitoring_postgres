@@ -123,6 +123,8 @@
 
     if($_GET['halaman'] == "monitoring_ssw"){
       include_once "monitoring_ssw.php";
+    }else if($_GET['halaman'] == "monitoring_realtime"){
+      include_once "monitoring_ssw_realtime.php";
     }
 
 ?>
