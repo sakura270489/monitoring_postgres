@@ -1,6 +1,11 @@
+<script type = "text/JavaScript">
+            function AutoRefresh( t ) {
+               setTimeout("location.reload(true);", t);
+            }
+      </script>
 <?php
-$page = $_SERVER['PHP_SELF'];
-$sec = "2";
+// $page = $_SERVER['home.php?halaman=monitoring_realtime'];
+// $sec = "2";
 
 	$db_connection = pg_connect("host=172.18.1.234 dbname=ssw user=postgres password=singlepostgreswindow");
 	// $db_insert = pg_connect("host=172.18.1.244 dbname=mon user=postgres password=singlepostgreswindow");
@@ -10,7 +15,7 @@ $sec = "2";
     <head>
     <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
     </head>
-    <body>
+    <body onload = "JavaScript:AutoRefresh(2000);">
 	<form name="form1" method="post" id="form1">
 	<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">

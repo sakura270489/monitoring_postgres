@@ -3,7 +3,7 @@
 // $sec = "2";
 
 	$db_connection = pg_connect("host=172.18.1.234 dbname=ssw user=postgres password=singlepostgreswindow");
-	$db_insert = pg_connect("host=172.18.1.244 dbname=mon user=postgres password=singlepostgreswindow");
+	// $db_insert = pg_connect("host=172.18.1.244 dbname=mon user=postgres password=singlepostgreswindow");
 	
 ?>
 <html>
@@ -26,10 +26,19 @@
 						</ul><!-- /.breadcrumb -->
 	</div>
 	<div class="page-header">
-							<h1>
-								Monitoring SSW
-							</h1>
-						</div>
+		<h1>
+			Monitoring SSW
+		</h1>
+	</div>
+	<table border=0 align="right">
+		<tr>
+			<td><h3><strong>Hapus semua jika sudah lebih dari 30 menit</strong></h3></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="ssw_hapus_semua.php" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>
+		</tr>
+	</table>
+	<p>&nbsp;</p>
 	<table border=1 id="simple-table" class="table  table-bordered table-hover">
 	
 		<tr>

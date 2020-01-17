@@ -49,7 +49,17 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
-        <?php include('monitoring_ssw.php');?>
+        <?php // include('monitoring_ssw.php');
+
+              if($_GET['halaman'] == "monitoring_ssw"){
+                include_once "monitoring_ssw.php";
+              } elseif($_GET['halaman'] == "monitoring_realtime"){
+                include_once "monitoring_ssw_realtime.php";
+              } elseif($_GET['halaman'] == "selamat_datang"){
+                include_once "selamat_datang.php";
+              }
+
+        ?>
       </section>
     </section>
     <!--main content end-->
@@ -123,9 +133,11 @@
 
     if($_GET['halaman'] == "monitoring_ssw"){
       include_once "monitoring_ssw.php";
-    }else if($_GET['halaman'] == "monitoring_realtime"){
+    } elseif($_GET['halaman'] == "monitoring_realtime"){
       include_once "monitoring_ssw_realtime.php";
-    }
+    } 
+
+    // echo $_GET[halaman];
 
 ?>
 
