@@ -11,6 +11,7 @@
     <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
     </head>
     <body>
+	<form name="form1" method="post" id="form1">
 	<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
 							<li>
@@ -70,19 +71,17 @@
 			<td><?php echo $output[11];?></td>
 			<td><?php echo $output[7];?></td>
 			<td><?php echo $output[10];?></td>
-			<td><button class="btn btn-app btn-danger btn-sm" name="hapus" type="submit">
-					<i class="ace-icon fa fa-trash-o bigger-200"></i>
-					Delete
-				</button>
+			<td><a href="delete_terminate.php?hapus=<?php echo $output[0];?>">hapus</a></td>
+			<!-- <td><input class="btn btn-app btn-danger btn-sm" name="hapus[<?php echo $output[0];?>]" value="Delete" type="submit" id="hapus[<?php echo $output[0];?>]" /> -->
 			</td>
 		</tr>
 	
 
-
 <?php
 
-	if($_POST['hapus']){
-		$yr = "select pg_terminate_backend(pid), query from pg_stat_activity where pid = ".$output[0]." and state = 'idle' and datname = current_database()";
+	if(isset($_GET['hapus'])){
+		$yr = "select pg_terminate_backend(pid), query from pg_stat_activity where pid = ".$_GET['hapus']." and state = 'idle' and datname = current_database()";
+		echo $yr."<br>";
 		// $te = pg_query($db_connection, $yr); 
 		// $iu = pg_fetch_row($te);
 		// pg_close($db_connection);
@@ -96,4 +95,5 @@
 
 </table>
 </body>
+</form>
 </html>
