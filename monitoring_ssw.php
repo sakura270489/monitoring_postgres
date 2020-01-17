@@ -71,21 +71,11 @@
 			<td><?php echo $output[11];?></td>
 			<td><?php echo $output[7];?></td>
 			<td><?php echo $output[10];?></td>
-			<td><a href="delete_terminate.php?hapus=<?php echo $output[0];?>">hapus</a></td>
-			<!-- <td><input class="btn btn-app btn-danger btn-sm" name="hapus[<?php echo $output[0];?>]" value="Delete" type="submit" id="hapus[<?php echo $output[0];?>]" /> -->
-			</td>
+			<td><a href="delete_terminate.php?hapus=<?php echo $output[0];?>" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>
 		</tr>
 	
 
 <?php
-
-	if(isset($_GET['hapus'])){
-		$yr = "select pg_terminate_backend(pid), query from pg_stat_activity where pid = ".$_GET['hapus']." and state = 'idle' and datname = current_database()";
-		echo $yr."<br>";
-		// $te = pg_query($db_connection, $yr); 
-		// $iu = pg_fetch_row($te);
-		// pg_close($db_connection);
-	}
 		
 	}
 	

@@ -119,4 +119,12 @@
   </script>
 </body>
 
+<?php
+
+    if($_GET['halaman'] == "monitoring_ssw"){
+      include_once "monitoring_ssw.php";
+    }
+
+?>
+
 </html>
