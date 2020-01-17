@@ -21,13 +21,13 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="#">Home</a>
+								<a href="home.php?halaman=selamat_datang">Home</a>
 							</li>
 
 							<li>
-								<a href="#">Tables</a>
+								<a href="#">SSW</a>
 							</li>
-							<li class="active">Simple &amp; Dynamic</li>
+							<li class="active">Monitoring Realtime</li>
 						</ul><!-- /.breadcrumb -->
 	</div>
 	<div class="page-header">
