@@ -14,8 +14,11 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="profile.html"><img src="img/ui-sam.jpg" class="img-circle" width="80"></a></p>
-          <h5 class="centered">Sam Soffes</h5>
+          <!-- <p class="centered"><a href="profile.html"><img src="img/ui-sam.jpg" class="img-circle" width="80"></a></p>
+          <h5 class="centered">Sam Soffes</h5> -->
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
           <li class="mt">
             <a class="active" href="home.php?halaman=selamat_datang">
               <i class="fa fa-dashboard"></i>
@@ -30,7 +33,7 @@
             <ul class="sub">
               <li><a href="home.php?halaman=monitoring_realtime">Monitoring Real Time</a></li>
               <li><a href="home.php?halaman=monitoring_ssw">Monitoring Aktifitas</a></li>
-              <li><a href="panels.html">Monitoring Size</a></li>
+              <li><a href="home.php?halaman=ssw_size">Monitoring Size</a></li>
               <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
             </ul>
           </li>

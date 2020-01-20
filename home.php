@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Dashio - Bootstrap Admin Template</title>
+  <title>Monitoring Database Postgres</title>
 
   <!-- Favicons -->
   <link href="img/favicon.png" rel="icon">
@@ -57,7 +57,10 @@
                 include_once "monitoring_ssw_realtime.php";
               } elseif($_GET['halaman'] == "selamat_datang"){
                 include_once "selamat_datang.php";
+              } elseif($_GET['halaman'] == "ssw_size"){
+                include_once "monitoring_ssw_size.php";
               }
+            
 
         ?>
       </section>
