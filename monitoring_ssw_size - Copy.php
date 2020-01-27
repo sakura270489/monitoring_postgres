@@ -24,9 +24,7 @@
             Monitoring SSW
         </h1>
     </div>
-	<div class="content-panel">
-            <div class="adv-table">
-	<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
+	<table border=1 id="hidden-table-info" class="display table table-bordered">
 	
 		<tr>
 			<th class="detail-col">OID</th>
@@ -63,8 +61,6 @@
 ?>
 
 </table>
-</div>
-          </div>
 
 <?php
 
@@ -72,7 +68,7 @@
 
 ?>
 
-<!-- <div class="modal-footer no-margin-top">
+<div class="modal-footer no-margin-top">
 
 	<ul class="pagination pull-right no-margin">
 		<li class="prev disabled">
@@ -99,20 +95,9 @@
 			</a>
 		</li>
 	</ul>
-</div> -->
+</div>
 
 <script type="text/javascript">
-
-function fnFormatDetails(oTable, nTr) {
-      var aData = oTable.fnGetData(nTr);
-      var sOut = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">';
-      sOut += '<tr><td>Rendering engine:</td><td>' + aData[1] + ' ' + aData[4] + '</td></tr>';
-      sOut += '<tr><td>Link to source:</td><td>Could provide a link here</td></tr>';
-      sOut += '<tr><td>Extra info:</td><td>And any further details here (images etc)</td></tr>';
-      sOut += '</table>';
-
-      return sOut;
-    }
 
 $(document).ready(function() {
       /*
@@ -120,16 +105,16 @@ $(document).ready(function() {
        */
       var nCloneTh = document.createElement('th');
       var nCloneTd = document.createElement('td');
-    //   nCloneTd.innerHTML = '<img src="lib/advanced-datatable/images/details_open.png">';
-    //   nCloneTd.className = "center";
+      nCloneTd.innerHTML = '<img src="lib/advanced-datatable/images/details_open.png">';
+      nCloneTd.className = "center";
 
-    //   $('#hidden-table-info thead tr').each(function() {
-    //     this.insertBefore(nCloneTh, this.childNodes[0]);
-    //   });
+      $('#hidden-table-info thead tr').each(function() {
+        this.insertBefore(nCloneTh, this.childNodes[0]);
+      });
 
-    //   $('#hidden-table-info tbody tr').each(function() {
-    //     this.insertBefore(nCloneTd.cloneNode(true), this.childNodes[0]);
-    //   });
+      $('#hidden-table-info tbody tr').each(function() {
+        this.insertBefore(nCloneTd.cloneNode(true), this.childNodes[0]);
+      });
 
       /*
        * Initialse DataTables, with no sorting on the 'details' column
