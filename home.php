@@ -96,6 +96,12 @@
                 include_once "monitoring_tekocak_realtime.php";
               } elseif($_GET['halaman'] == "tekocak_size"){
                 include_once "monitoring_tekocak_size.php";
+              } elseif($_GET['halaman'] == "monitoring_gakin"){
+                include_once "monitoring_gakin.php";
+              } elseif($_GET['halaman'] == "monitoring_realtime_gakin"){
+                include_once "monitoring_gakin_realtime.php";
+              } elseif($_GET['halaman'] == "gakin_size"){
+                include_once "monitoring_gakin_size.php";
               }
             
         ?>

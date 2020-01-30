@@ -1,13 +1,22 @@
+<script type = "text/JavaScript">
+            function AutoRefresh( t ) {
+               setTimeout("location.reload(true);", t);
+            }
+      </script>
 <?php
-// $page = $_SERVER['PHP_SELF'];
+// $page = $_SERVER['home.php?halaman=monitoring_realtime'];
 // $sec = "2";
 
 $db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 password=EGOVPASS");
 	// $db_insert = pg_connect("host=172.18.1.244 dbname=mon user=postgres password=singlepostgreswindow");
 	
 ?>
+<html>
+    <head>
     <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
-	<form name="form1" method="post" id="form1">
+    </head>
+    <body onload = "JavaScript:AutoRefresh(2000);">
+	<form name="form1" method="post" id="form1" >
 	<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
 							<li>
@@ -22,11 +31,10 @@ $db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 passw
 						</ul><!-- /.breadcrumb -->
 	</div>
 	<div class="page-header">
-		<h1>
-			Monitoring Tekocak
-		</h1>
-	</div>
-	
+        <h1>
+            Monitoring Tekocak
+        </h1>
+    </div>
 	<table border=1 id="simple-table" class="table  table-bordered table-hover">
 	
 		<tr>
@@ -41,7 +49,7 @@ $db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 passw
 			<th class="detail-col">State</th>
 			<th class="detail-col">Query</th>
 			<th class="detail-col">Time Per Milliseconds</th>
-			<th class="detail-col">Action</th>
+			<!-- <th class="detail-col">Action</th> -->
 		</tr>
 		
 
@@ -68,7 +76,7 @@ $db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 passw
 			<td><?php echo $output[11];?></td>
 			<td><?php echo $output[7];?></td>
 			<td><?php echo $output[10];?></td>
-			<td><a href="delete_terminate.php?hapus=<?php echo $output[0];?>&id=tekocak" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>
+			<!-- <td><a href="delete_terminate.php?hapus=<?php echo $output[0];?>" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td> -->
 		</tr>
 	
 
@@ -81,4 +89,6 @@ $db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 passw
 ?>	
 
 </table>
+</body>
 </form>
+</html>

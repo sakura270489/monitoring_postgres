@@ -61,6 +61,18 @@
               <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
             </ul>
           </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-desktop"></i>
+              <span>Gakin</span>
+              </a>
+            <ul class="sub">
+              <li><a href="home.php?halaman=monitoring_realtime_gakin">Monitoring Real Time</a></li>
+              <li><a href="home.php?halaman=monitoring_gakin">Monitoring Aktifitas</a></li>
+              <li><a href="home.php?halaman=gakin_size">Monitoring Size</a></li>
+              <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
+            </ul>
+          </li>
           
         </ul>
         <!-- sidebar menu end-->

@@ -8,6 +8,8 @@
 		$db_connection = pg_connect("host=172.18.1.233 dbname=esuratmerdeka user=postgres password=!TakonAe.Juan");
 	}else if($_GET['hapus'] == "tekocak"){
 		$db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 password=EGOVPASS");
+	}elseif($_GET['hapus'] == "gakin"){
+		$db_connection = pg_connect("host=172.18.0.245 dbname=gakin user=postgres password=admin245");
 	}
 
 

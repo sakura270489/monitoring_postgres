@@ -23,7 +23,7 @@
 							</li>
 
 							<li>
-								<a href="#">SSW</a>
+								<a href="#">Esurat</a>
 							</li>
 							<li class="active">Monitoring Aktifitas</li>
 						</ul><!-- /.breadcrumb -->
