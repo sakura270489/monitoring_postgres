@@ -1,13 +1,20 @@
+<script type = "text/JavaScript">
+            function AutoRefresh( t ) {
+               setTimeout("location.reload(true);", t);
+            }
+      </script>
+
 <?php
 // $page = $_SERVER['PHP_SELF'];
 // $sec = "2";
 
-	$db_connection = pg_connect("host=172.18.1.234 dbname=ssw user=postgres password=singlepostgreswindow");
+	$db_connection = pg_connect("host=172.18.1.233 dbname=esuratmerdeka user=postgres password=!TakonAe.Juan");
 	// $db_insert = pg_connect("host=172.18.1.244 dbname=mon user=postgres password=singlepostgreswindow");
 	
 ?>
     <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
-	<form name="form1" method="post" id="form1">
+<body onload = "JavaScript:AutoRefresh(2000);">
+	<form name="form1" method="post" id="form1" >
 	<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
 							<li>
@@ -23,18 +30,10 @@
 	</div>
 	<div class="page-header">
 		<h1>
-			Monitoring SSW
+			Monitoring Esurat
 		</h1>
 	</div>
-	<table border=0 align="right">
-		<tr>
-			<td><h3><strong>Hapus semua jika sudah lebih dari 30 menit</strong></h3></td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td><a href="#" class="btn btn-app btn-success" onClick="document.location.reload(true)">Reload</a>&nbsp;&nbsp;&nbsp;<a href="ssw_hapus_semua.php?hapus=ssw" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>
-		</tr>
-	</table>
-	<p>&nbsp;</p>
+
 	<table border=1 id="simple-table" class="table  table-bordered table-hover">
 	
 		<tr>
@@ -76,7 +75,7 @@
 			<td><?php echo $output[11];?></td>
 			<td><?php echo $output[7];?></td>
 			<td><?php echo $output[10];?></td>
-			<td><a href="delete_terminate.php?hapus=<?php echo $output[0];?>&id=ssw" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>
+			<td><a href="delete_terminate.php?hapus=<?php echo $output[0];?>" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>
 		</tr>
 	
 
@@ -90,3 +89,4 @@
 
 </table>
 </form>
+</body>

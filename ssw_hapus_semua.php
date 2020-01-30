@@ -1,6 +1,15 @@
 <?php
 
-    $db_connection = pg_connect("host=172.18.1.234 dbname=ssw user=postgres password=singlepostgreswindow");
+	if($_GET['hapus'] == "ssw"){
+
+		$db_connection = pg_connect("host=172.18.1.234 dbname=ssw user=postgres password=singlepostgreswindow");
+	
+	}else if($_GET['hapus'] == "esurat"){
+		$db_connection = pg_connect("host=172.18.1.233 dbname=esuratmerdeka user=postgres password=!TakonAe.Juan");
+	}else if($_GET['hapus'] == "tekocak"){
+		$db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 password=EGOVPASS");
+	}
+
 
     $df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (state_change - backend_start) as time_per_milliseconds, state from pg_stat_activity where query != ''";
     // echo $df."<br>";

@@ -1,6 +1,12 @@
 <?php
 
-$db_connection = pg_connect("host=172.18.1.234 dbname=ssw user=postgres password=singlepostgreswindow");
+if($_GET['id'] == "ssw"){
+    $db_connection = pg_connect("host=172.18.1.234 dbname=ssw user=postgres password=singlepostgreswindow");
+}else if($_GET['id'] == "esurat"){
+    $db_connection = pg_connect("host=172.18.1.233 dbname=esuratmerdeka user=postgres password=!TakonAe.Juan");
+}else if($_GET['id'] == "tekocak"){
+    $db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 password=EGOVPASS");
+}
 
 $yr = "select pg_terminate_backend(pid), query from pg_stat_activity where pid = ".$_GET['hapus']." and state = 'idle'";
 // echo $yr."<br>";

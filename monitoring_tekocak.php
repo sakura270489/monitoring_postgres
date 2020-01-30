@@ -2,7 +2,7 @@
 // $page = $_SERVER['PHP_SELF'];
 // $sec = "2";
 
-	$db_connection = pg_connect("host=172.18.1.234 dbname=ssw user=postgres password=singlepostgreswindow");
+$db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 password=EGOVPASS");
 	// $db_insert = pg_connect("host=172.18.1.244 dbname=mon user=postgres password=singlepostgreswindow");
 	
 ?>
@@ -16,7 +16,7 @@
 							</li>
 
 							<li>
-								<a href="#">SSW</a>
+								<a href="#">Tekocak</a>
 							</li>
 							<li class="active">Monitoring Aktifitas</li>
 						</ul><!-- /.breadcrumb -->
@@ -31,7 +31,7 @@
 			<td><h3><strong>Hapus semua jika sudah lebih dari 30 menit</strong></h3></td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
-			<td><a href="#" class="btn btn-app btn-success" onClick="document.location.reload(true)">Reload</a>&nbsp;&nbsp;&nbsp;<a href="ssw_hapus_semua.php?hapus=ssw" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>
+			<td><a href="#" class="btn btn-app btn-success" onClick="document.location.reload(true)">Reload</a>&nbsp;&nbsp;&nbsp;<a href="ssw_hapus_semua.php?hapus=tekocak" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>
 		</tr>
 	</table>
 	<p>&nbsp;</p>
@@ -76,7 +76,7 @@
 			<td><?php echo $output[11];?></td>
 			<td><?php echo $output[7];?></td>
 			<td><?php echo $output[10];?></td>
-			<td><a href="delete_terminate.php?hapus=<?php echo $output[0];?>&id=ssw" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>
+			<td><a href="delete_terminate.php?hapus=<?php echo $output[0];?>&id=tekocak" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>
 		</tr>
 	
 

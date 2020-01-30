@@ -84,6 +84,18 @@
                 include_once "selamat_datang.php";
               } elseif($_GET['halaman'] == "ssw_size"){
                 include_once "monitoring_ssw_size.php";
+              } elseif($_GET['halaman'] == "monitoring_esurat"){
+                include_once "monitoring_esurat.php";
+              } elseif($_GET['halaman'] == "monitoring_realtime_esurat"){
+                include_once "monitoring_esurat_realtime.php";
+              } elseif($_GET['halaman'] == "esurat_size"){
+                include_once "monitoring_esurat_size.php";
+              } elseif($_GET['halaman'] == "monitoring_tekocak"){
+                include_once "monitoring_tekocak.php";
+              } elseif($_GET['halaman'] == "monitoring_realtime_tekocak"){
+                include_once "monitoring_tekocak_realtime.php";
+              } elseif($_GET['halaman'] == "tekocak_size"){
+                include_once "monitoring_tekocak_size.php";
               }
             
         ?>

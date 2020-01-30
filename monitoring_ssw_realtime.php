@@ -16,7 +16,7 @@
     <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
     </head>
     <body onload = "JavaScript:AutoRefresh(2000);">
-	<form name="form1" method="post" id="form1">
+	<form name="form1" method="post" id="form1" >
 	<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
 							<li>
