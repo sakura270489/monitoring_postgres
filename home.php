@@ -102,6 +102,12 @@
                 include_once "monitoring_gakin_realtime.php";
               } elseif($_GET['halaman'] == "gakin_size"){
                 include_once "monitoring_gakin_size.php";
+              } elseif($_GET['halaman'] == "monitoring_bumil"){
+                include_once "monitoring_bumil.php";
+              } elseif($_GET['halaman'] == "monitoring_realtime_bumil"){
+                include_once "monitoring_bumil_realtime.php";
+              } elseif($_GET['halaman'] == "bumil_size"){
+                include_once "monitoring_bumil_size.php";
               }
             
         ?>
