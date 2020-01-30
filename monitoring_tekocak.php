@@ -23,7 +23,7 @@ $db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 passw
 	</div>
 	<div class="page-header">
 		<h1>
-			Monitoring SSW
+			Monitoring Tekocak
 		</h1>
 	</div>
 	<table border=0 align="right">
