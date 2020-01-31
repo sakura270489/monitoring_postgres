@@ -15,7 +15,7 @@
           Created by Team Database and Server Dinas Komunikasi dan Informatika Kota Surabaya</a>
         </div>
         <a href="home.php?halaman=selamat_datang" class="go-top">
-          <i class="fa fa-angle-up"></i>
+          <i class="fa fa-home"></i>
           </a>
       </div>
     </footer>
