@@ -3,7 +3,7 @@
     <footer class="site-footer">
       <div class="text-center">
         <p>
-          &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved
+          &copy; Copyrights <strong>Team Database dan Server</strong>. All Rights Reserved
         </p>
         <div class="credits">
           <!--
