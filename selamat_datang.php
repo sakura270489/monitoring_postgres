@@ -17,7 +17,7 @@ $db_bumil = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=d
     </ul><!-- /.breadcrumb -->
 </div>
 
-<h1>selamat datang</h1>
+<h1>selamat datang di monitoring Database</h1>
 
 <!-- ssw disk -->
 <div class="row">
