@@ -11,8 +11,8 @@
   <title>Monitoring Database Postgres</title>
 
   <!-- Favicons -->
-  <!-- <link href="img/favicon.png" rel="icon"> -->
-  <!-- <link href="img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <link href="img/500_F_125712670_cXZJuMoaei6pxIzWZnqqbDC1WA3DpQ9H.jpg" rel="icon">
+  <!-- <link href="img/cloudmonitoring.png" rel="cloudmonitoring"> -->
 
   <!-- Bootstrap core CSS -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">

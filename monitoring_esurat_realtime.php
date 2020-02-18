@@ -48,7 +48,7 @@
 			<th class="detail-col">State</th>
 			<th class="detail-col">Query</th>
 			<th class="detail-col">Time Per Milliseconds</th>
-			<th class="detail-col">Action</th>
+			<!-- <th class="detail-col">Action</th> -->
 		</tr>
 		
 
@@ -75,7 +75,7 @@
 			<td><?php echo $output[11];?></td>
 			<td><?php echo $output[7];?></td>
 			<td><?php echo $output[10];?></td>
-			<td><a href="delete_terminate.php?hapus=<?php echo $output[0];?>" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>
+			<!-- <td><a href="delete_terminate.php?hapus=<?php echo $output[0];?>" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>-->
 		</tr>
 	
 

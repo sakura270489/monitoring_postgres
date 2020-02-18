@@ -14,10 +14,11 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <!-- <p class="centered"><a href="profile.html"><img src="img/ui-sam.jpg" class="img-circle" width="80"></a></p>
-          <h5 class="centered">Sam Soffes</h5> -->
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+          <!-- <p class="centered"><a href="profile.html"><img src="img/cloudmonitoring.jpg" class="img-circle" width="80"></a></p>-->
+          <p class="centered"><img src="img/Data-Modeling-Software-1.jpg" class="img-circle" width="180" height="150"></p>
+          <!-- <h5 class="centered">Sam Soffes</h5> -->
           <p>&nbsp;</p>
           <li class="mt">
             <a class="active" href="home.php?halaman=selamat_datang">
