@@ -7,6 +7,8 @@
       include_once "monitoring_ssw_realtime.php";
     } */
 
+    session_start();
+
 ?>
 
 <!--sidebar start-->
@@ -33,7 +35,15 @@
               </a>
             <ul class="sub">
               <li><a href="home.php?halaman=monitoring_realtime">Monitoring Real Time</a></li>
+              <?php
+
+                  if ($_SESSION['level'] == 1) {
+              ?>
               <li><a href="home.php?halaman=monitoring_ssw">Monitoring Aktifitas</a></li>
+              <?php
+                  }
+              
+              ?>
               <li><a href="home.php?halaman=ssw_size">Monitoring Size</a></li>
               <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
             </ul>
@@ -45,7 +55,16 @@
               </a>
             <ul class="sub">
               <li><a href="home.php?halaman=monitoring_realtime_esurat">Monitoring Real Time</a></li>
+              <?php
+
+                  if ($_SESSION['level'] == 1) {
+                      ?>
               <li><a href="home.php?halaman=monitoring_esurat">Monitoring Aktifitas</a></li>
+              <?php
+                  
+                  }
+              
+              ?>
               <li><a href="home.php?halaman=esurat_size">Monitoring Size</a></li>
               <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
             </ul>
@@ -57,7 +76,15 @@
               </a>
             <ul class="sub">
               <li><a href="home.php?halaman=monitoring_realtime_tekocak">Monitoring Real Time</a></li>
+              <?php
+
+                  if ($_SESSION['level'] == 1) {
+                      ?>
               <li><a href="home.php?halaman=monitoring_tekocak">Monitoring Aktifitas</a></li>
+              <?php
+                  }
+              
+              ?>
               <li><a href="home.php?halaman=tekocak_size">Monitoring Size</a></li>
               <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
             </ul>
@@ -69,7 +96,15 @@
               </a>
             <ul class="sub">
               <li><a href="home.php?halaman=monitoring_realtime_gakin">Monitoring Real Time</a></li>
+              <?php
+
+                  if ($_SESSION['level'] == 1) {
+                      ?>
               <li><a href="home.php?halaman=monitoring_gakin">Monitoring Aktifitas</a></li>
+              <?php
+                  }
+              
+              ?>
               <li><a href="home.php?halaman=gakin_size">Monitoring Size</a></li>
               <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
             </ul>
@@ -81,7 +116,15 @@
               </a>
             <ul class="sub">
               <li><a href="home.php?halaman=monitoring_realtime_bumil">Monitoring Real Time</a></li>
+              <?php
+
+                  if ($_SESSION['level'] == 1) {
+                      ?>
               <li><a href="home.php?halaman=monitoring_bumil">Monitoring Aktifitas</a></li>
+              <?php
+                  }
+              
+              ?>
               <li><a href="home.php?halaman=bumil_size">Monitoring Size</a></li>
               <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
             </ul>
