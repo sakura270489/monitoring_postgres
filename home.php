@@ -112,6 +112,16 @@
                 include_once "monitoring_bumil_realtime.php";
               } elseif($_GET['halaman'] == "bumil_size"){
                 include_once "monitoring_bumil_size.php";
+              }elseif($_GET['halaman'] == "gakin_user"){
+                include_once "monitoring_gakin_user.php";
+              }elseif($_GET['halaman'] == "ssw_user"){
+                include_once "monitoring_ssw_user.php";
+              }elseif($_GET['halaman'] == "tekocak_user"){
+                include_once "monitoring_tekocak_user.php";
+              }elseif($_GET['halaman'] == "esurat_user"){
+                include_once "monitoring_esurat_user.php";
+              }elseif($_GET['halaman'] == "bumil_user"){
+                include_once "monitoring_bumil_user.php";
               }
             
         ?>
