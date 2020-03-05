@@ -72,6 +72,7 @@ $db_connection = pg_connect("host=172.18.1.244 dbname=mon user=postgres password
 
                 $_SESSION['nama'] = $hasil[0];
                 $_SESSION['level'] = $hasil[2];
+                $_SESSION["last_login_time"] = time();
 
                 // echo $_SESSION['level'];
              echo "<script type='text/javascript'>

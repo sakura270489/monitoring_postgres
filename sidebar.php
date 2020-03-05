@@ -46,6 +46,7 @@
               ?>
               <li><a href="home.php?halaman=ssw_size">Monitoring Size</a></li>
               <li><a href="home.php?halaman=ssw_user">Monitoring User</a></li>
+              <li><a href="home.php?halaman=daftar_ip&db=ssw">Monitoring Daftar IP</a></li>
               <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
             </ul>
           </li>
@@ -68,6 +69,7 @@
               ?>
               <li><a href="home.php?halaman=esurat_size">Monitoring Size</a></li>
               <li><a href="home.php?halaman=esurat_user">Monitoring User</a></li>
+              <li><a href="home.php?halaman=daftar_ip&db=esurat">Monitoring Daftar IP</a></li>
               <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
             </ul>
           </li>
@@ -88,7 +90,8 @@
               
               ?>
               <li><a href="home.php?halaman=tekocak_size">Monitoring Size</a></li>
-              <li><a href="home.php?halaman=tekocak_user">Monitoring user</a></li>
+              <li><a href="home.php?halaman=tekocak_user">Monitoring User</a></li>
+              <li><a href="home.php?halaman=daftar_ip&db=tekocak">Monitoring Daftar IP</a></li>
               <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
             </ul>
           </li>
@@ -110,6 +113,7 @@
               ?>
               <li><a href="home.php?halaman=gakin_size">Monitoring Size</a></li>
               <li><a href="home.php?halaman=gakin_user">Monitoring User</a></li>
+              <li><a href="home.php?halaman=daftar_ip&db=gakin">Monitoring Daftar IP</a></li>
               <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
             </ul>
           </li>
@@ -131,6 +135,7 @@
               ?>
               <li><a href="home.php?halaman=bumil_size">Monitoring Size</a></li>
               <li><a href="home.php?halaman=bumil_user">Monitoring User</a></li>
+              <li><a href="home.php?halaman=daftar_ip&db=bumil">Monitoring Daftar IP</a></li>
               <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
             </ul>
           </li>

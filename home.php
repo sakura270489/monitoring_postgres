@@ -122,6 +122,8 @@
                 include_once "monitoring_esurat_user.php";
               }elseif($_GET['halaman'] == "bumil_user"){
                 include_once "monitoring_bumil_user.php";
+              }elseif($_GET['halaman'] == "daftar_ip"){
+                include_once "daftar_ip.php";
               }
             
         ?>

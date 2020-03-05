@@ -2,6 +2,12 @@
 
 session_start();
 
+if (isset($_SESSION["nama"])) {
+    if ((time() - $_SESSION["last_login_time"]) > 60) {
+        header("window.location.href = 'logout.php'");
+    }
+}
+
 $db_ssw = pg_connect("host=172.18.1.234 dbname=ssw user=postgres password=singlepostgreswindow");
 $db_esurat = pg_connect("host=172.18.1.233 dbname=esuratmerdeka user=postgres password=!TakonAe.Juan");
 $db_tekocak = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 password=EGOVPASS");
@@ -9,6 +15,8 @@ $db_gakin = pg_connect("host=172.18.0.245 dbname=gakin user=postgres password=ad
 $db_bumil = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=dba.surabaya@2019");
 
 ?>
+
+
 
 <div class="breadcrumbs ace-save-state" id="breadcrumbs">
     <ul class="breadcrumb">
