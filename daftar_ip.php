@@ -14,14 +14,47 @@
 							</li>
 
 							<li>
-								<a href="#">SSW</a>
+								<a href="#">
+
+                                    <?php
+                                    
+                                        if($_GET['db'] == "ssw"){
+                                            echo "SSW";
+                                        }else if($_GET['db'] == "gakin"){
+                                            echo "Gakin";
+                                        }else if($_GET['db'] == "esurat"){
+                                            echo "Esurat";
+                                        }else if($_GET['db'] == "tekocak"){
+                                            echo "Tekocak";
+                                        }else if($_GET['db'] == "bumil"){
+                                            echo "Bumil";
+                                        }
+                                    
+                                    ?>
+
+                                </a>
 							</li>
 							<li class="active">Monitoring Pengguna IP</li>
 						</ul><!-- /.breadcrumb -->
 	</div>
 	<div class="page-header">
         <h1>
-            Monitoring SSW
+        <?php
+        
+            if($_GET['db'] == "ssw"){
+                echo "Monitoring SSW";
+            }else if($_GET['db'] == "gakin"){
+                echo "Monitoring Gakin";
+            }else if($_GET['db'] == "esurat"){
+                echo "Monitoring Esurat";
+            }else if($_GET['db'] == "tekocak"){
+                echo "Monitoring Tekocak";
+            }else if($_GET['db'] == "bumil"){
+                echo "Monitoring Bumil";
+            }
+
+        ?>
+            
         </h1>
     </div>
 	<div class="content-panel">
