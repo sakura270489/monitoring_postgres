@@ -5,7 +5,7 @@
 session_start();
 
 	$db_connection = pg_connect("host=172.18.1.234 dbname=ssw user=postgres password=singlepostgreswindow");
-	// $db_insert = pg_connect("host=172.18.1.244 dbname=mon user=postgres password=singlepostgreswindow");
+	$db_insert = pg_connect("host=172.18.1.244 dbname=mon user=postgres password=singlepostgreswindow");
 	
 ?>
     <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
@@ -71,7 +71,18 @@ session_start();
 			<td><?php echo $output[1];?></td>
 			<td><?php echo $output[2];?></td>
 			<td><?php echo $output[8];?></td>
-			<td><?php echo $output[3];?></td>
+			<td><?php echo $output[3];?><br />
+			<?php 
+			$tr = "select nama from master_pengguna_ip where ip = '".$output[3]."' and db = 'ssw_234'";
+			$yr = pg_query($db_insert, $tr);
+            while ($sr = pg_fetch_row($yr)) {
+                if($sr[0] != " "){
+                	echo $sr[0];
+            	}else{
+					echo "";
+				}
+            }
+			?></td>
 			<td><?php echo $output[4];?></td>
 			<td><?php echo $output[5];?></td>
 			<td><?php echo $output[9];?></td>
