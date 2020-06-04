@@ -146,12 +146,12 @@
               <span>DB SQL 85</span>
               </a>
             <ul class="sub">
-              <li><a href="home.php?halaman=sql_85">Monitoring Real Time</a></li>
+              <li><a href="home.php?halaman=sql_85_realtime">Monitoring Real Time</a></li>
               <?php
 
                   if ($_SESSION['level'] == 1) {
                       ?>
-              <li><a href="home.php?halaman=monitoring_esurat">Monitoring Aktifitas</a></li>
+              <li><a href="home.php?halaman=sql_85">Monitoring Aktifitas</a></li>
               <?php
                   
                   }

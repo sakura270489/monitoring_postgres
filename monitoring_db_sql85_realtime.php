@@ -1,4 +1,8 @@
-
+<script type = "text/JavaScript">
+            function AutoRefresh( t ) {
+               setTimeout("location.reload(true);", t);
+            }
+      </script>
 
 <?php
 // $page = $_SERVER['PHP_SELF'];
@@ -23,7 +27,7 @@ if (!$conn) {
 ?>
 
 <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
-<body >
+<body onload = "JavaScript:AutoRefresh(2000);">
 	<form name="form1" method="post" id="form1">
 	<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
@@ -43,16 +47,6 @@ if (!$conn) {
 			Monitoring DB SQL 85
 		</h1>
 	</div>
-	<table border=0 align="right">
-		<tr>
-			<td><h3><strong>Refresh </strong></h3></td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td><a href="#" class="btn btn-app btn-success" onClick="document.location.reload(true)">Reload</a>&nbsp;&nbsp;&nbsp;
-            <!--<a href="ssw_hapus_semua.php?hapus=ssw" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a>-->
-            </td>
-		</tr>
-	</table>
 	<p>&nbsp;</p>
 	<table border=1 id="simple-table" class="table  table-bordered table-hover">
 	
@@ -65,14 +59,12 @@ if (!$conn) {
 			<th class="detail-col">Time </th>
 			<th class="detail-col">State</th>
 			<th class="detail-col">Info</th>
-			<th class="detail-col">Action</th>
 		</tr>
 		
 
 <?php	
 	// $df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (EXTRACT(milliseconds FROM state_change - backend_start)) as time_per_milliseconds from pg_stat_activity where query != ''";
 	$df = "select * from information_schema.processlist order by db asc";
-	// $df = "show full processlist";
 	// echo $df."<br>";
 	$result = mysqli_query($conn, $df);
 	while($output = mysqli_fetch_array($result)){
@@ -87,10 +79,9 @@ if (!$conn) {
 			<td><?php echo $output['HOST'];?></td>
 			<td><?php echo $output['DB'];?></td>
 			<td><?php echo $output['COMMAND'];?></td>
-			<td><?php echo $output['TIME'];?></td>
+			<td><?php echo $output['SEC_TO_TIME(TIME)'];?></td>
 			<td><?php echo $output['STATE'];?></td>
 			<td><?php echo $output[7];?></td>
-            <td><a href="delete_terminate_sql.php?hapus=<?php echo $output['ID'];?>&id=db_sql85" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>
 			
 		</tr>
 	
