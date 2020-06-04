@@ -157,9 +157,9 @@
                   }
               
               ?>
-              <li><a href="home.php?halaman=esurat_size">Monitoring Size</a></li>
+              <!--<li><a href="home.php?halaman=esurat_size">Monitoring Size</a></li>
               <li><a href="home.php?halaman=esurat_user">Monitoring User</a></li>
-              <li><a href="home.php?halaman=daftar_ip&db=esurat">Monitoring Daftar IP</a></li>
+              <li><a href="home.php?halaman=daftar_ip&db=esurat">Monitoring Daftar IP</a></li>-->
               <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
             </ul>
           </li>

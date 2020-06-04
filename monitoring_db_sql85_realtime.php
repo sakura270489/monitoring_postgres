@@ -71,7 +71,11 @@ if (!$conn) {
 		// echo $output[0];
 ?>
 <?php
-	$output[7] = mysqli_real_escape_string($output['INFO']);
+    $output[7] = mysqli_real_escape_string($output['INFO']);
+    
+    $mil = $output['TIME'];
+    $seconds = ceil($mil / 1000);
+
 ?>
 		<tr>
 			<td><?php echo $output['ID'];?></td>
@@ -79,7 +83,7 @@ if (!$conn) {
 			<td><?php echo $output['HOST'];?></td>
 			<td><?php echo $output['DB'];?></td>
 			<td><?php echo $output['COMMAND'];?></td>
-			<td><?php echo $output['SEC_TO_TIME(TIME)'];?></td>
+			<td><?php echo $output['TIME'];?></td>
 			<td><?php echo $output['STATE'];?></td>
 			<td><?php echo $output[7];?></td>
 			
