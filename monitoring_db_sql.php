@@ -33,7 +33,7 @@ if (!$conn) {
 							</li>
 
 							<li>
-								<a href="#">SSW</a>
+								<a href="#">DB SQL 85</a>
 							</li>
 							<li class="active">Monitoring Aktifitas</li>
 						</ul><!-- /.breadcrumb -->
