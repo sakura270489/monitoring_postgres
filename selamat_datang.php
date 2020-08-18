@@ -9,7 +9,10 @@ if (isset($_SESSION["nama"])) {
 }
 
 $db_ssw = pg_connect("host=172.18.1.234 dbname=ssw user=postgres password=singlepostgreswindow");
+<<<<<<< HEAD
 $db_mon = pg_connect("host=172.18.1.94 dbname=mon user=postgres password=dba.surabaya@2020");
+=======
+>>>>>>> 15ecdb1a6c78dcd0b3afd8fdd80e97284a334470
 $db_esurat = pg_connect("host=172.18.1.233 dbname=esuratmerdeka user=postgres password=!TakonAe.Juan");
 $db_tekocak = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 password=EGOVPASS");
 $db_gakin = pg_connect("host=172.18.0.245 dbname=gakin user=postgres password=admin245");
@@ -52,8 +55,13 @@ $db_bumil = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=d
 
                         ?>
                         <tr>
+<<<<<<< HEAD
                             <td align="left">&nbsp;&nbsp;<?php echo $ssw[0];?></td>
                             <td align="left">&nbsp;&nbsp;<?php echo $ssw[1];?></td>
+=======
+                            <td><?php echo $ssw[0];?></td>
+                            <td><?php echo $ssw[1];?></td>
+>>>>>>> 15ecdb1a6c78dcd0b3afd8fdd80e97284a334470
                         </tr>
                         <?php
                             }
@@ -83,8 +91,13 @@ $db_bumil = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=d
 
                         ?>
                         <tr>
+<<<<<<< HEAD
                             <td align="left">&nbsp;&nbsp;<?php echo $esurat[0];?></td>
                             <td align="left">&nbsp;&nbsp;<?php echo $esurat[1];?></td>
+=======
+                            <td><?php echo $esurat[0];?></td>
+                            <td><?php echo $esurat[1];?></td>
+>>>>>>> 15ecdb1a6c78dcd0b3afd8fdd80e97284a334470
                         </tr>
                         <?php
                             }
@@ -114,8 +127,13 @@ $db_bumil = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=d
 
                         ?>
                         <tr>
+<<<<<<< HEAD
                             <td align="left">&nbsp;&nbsp;<?php echo $tekocak[0];?></td>
                             <td align="left">&nbsp;&nbsp;<?php echo $tekocak[1];?></td>
+=======
+                            <td><?php echo $tekocak[0];?></td>
+                            <td><?php echo $tekocak[1];?></td>
+>>>>>>> 15ecdb1a6c78dcd0b3afd8fdd80e97284a334470
                         </tr>
                         <?php
                             }
@@ -145,8 +163,13 @@ $db_bumil = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=d
 
                         ?>
                         <tr>
+<<<<<<< HEAD
                             <td align="left">&nbsp;&nbsp;<?php echo $gakin[0];?></td>
                             <td align="left">&nbsp;&nbsp;<?php echo $gakin[1];?></td>
+=======
+                            <td><?php echo $gakin[0];?></td>
+                            <td><?php echo $gakin[1];?></td>
+>>>>>>> 15ecdb1a6c78dcd0b3afd8fdd80e97284a334470
                         </tr>
                         <?php
                             }
@@ -176,6 +199,7 @@ $db_bumil = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=d
 
                         ?>
                         <tr>
+<<<<<<< HEAD
                             <td align="left">&nbsp;&nbsp;<?php echo $bumil[0];?></td>
                             <td align="left">&nbsp;&nbsp;<?php echo $bumil[1];?></td>
                         </tr>
@@ -210,6 +234,10 @@ $db_bumil = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=d
                         <tr>
                             <td align="left">&nbsp;&nbsp;<?php echo $mon[0];?></td>
                             <td align="left">&nbsp;&nbsp;<?php echo $mon[1];?></td>
+=======
+                            <td><?php echo $bumil[0];?></td>
+                            <td><?php echo $bumil[1];?></td>
+>>>>>>> 15ecdb1a6c78dcd0b3afd8fdd80e97284a334470
                         </tr>
                         <?php
                             }
