@@ -1,13 +1,22 @@
+<script type = "text/JavaScript">
+            function AutoRefresh( t ) {
+               setTimeout("location.reload(true);", t);
+            }
+      </script>
 <?php
-// $page = $_SERVER['PHP_SELF'];
+// $page = $_SERVER['home.php?halaman=monitoring_realtime'];
 // $sec = "2";
 
-	$db_connection = pg_connect("host=172.18.1.233 dbname=esuratmerdeka user=postgres password=!TakonAe.Juan");
-	$db_insert = pg_connect("host=172.18.1.244 dbname=mon user=postgres password=singlepostgreswindow");
+$db_connection = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=dba.surabaya@2019");
+	// $db_insert = pg_connect("host=172.18.1.244 dbname=mon user=postgres password=singlepostgreswindow");
 	
 ?>
+<html>
+    <head>
     <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
-	<form name="form1" method="post" id="form1">
+    </head>
+    <body onload = "JavaScript:AutoRefresh(2000);">
+	<form name="form1" method="post" id="form1" >
 	<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
 							<li>
@@ -16,25 +25,16 @@
 							</li>
 
 							<li>
-								<a href="#">Esurat</a>
+								<a href="#">Bumil</a>
 							</li>
-							<li class="active">Monitoring Aktifitas</li>
+							<li class="active">Monitoring Realtime</li>
 						</ul><!-- /.breadcrumb -->
 	</div>
 	<div class="page-header">
-		<h1>
-			Monitoring Esurat
-		</h1>
-	</div>
-	<table border=0 align="right">
-		<tr>
-			<td><h3><strong>Hapus semua jika sudah lebih dari 30 menit</strong></h3></td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td><a href="#" class="btn btn-app btn-success" onClick="document.location.reload(true)">Reload</a>&nbsp;&nbsp;&nbsp;<a href="ssw_hapus_semua.php?hapus=esurat" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>
-		</tr>
-	</table>
-	<p>&nbsp;</p>
+        <h1>
+            Monitoring Bumil
+        </h1>
+    </div>
 	<table border=1 id="simple-table" class="table  table-bordered table-hover">
 	
 		<tr>
@@ -49,7 +49,7 @@
 			<th class="detail-col">State</th>
 			<th class="detail-col">Query</th>
 			<th class="detail-col">Time Per Milliseconds</th>
-			<th class="detail-col">Action</th>
+			<!-- <th class="detail-col">Action</th> -->
 		</tr>
 		
 
@@ -69,27 +69,14 @@
 			<td><?php echo $output[1];?></td>
 			<td><?php echo $output[2];?></td>
 			<td><?php echo $output[8];?></td>
-			<td><?php echo $output[3];?>
-			<br />
-			<?php 
-				$tr = "select nama from master_pengguna_ip where ip = '".$output[3]."' and db = 'esurat_233'";
-				$yr = pg_query($db_insert, $tr);
-				while ($sr = pg_fetch_row($yr)) {
-					if ($sr[0] != " ") {
-						echo $sr[0];
-					} else {
-						echo "";
-					}
-				}
-			?>
-			</td>
+			<td><?php echo $output[3];?></td>
 			<td><?php echo $output[4];?></td>
 			<td><?php echo $output[5];?></td>
 			<td><?php echo $output[9];?></td>
 			<td><?php echo $output[11];?></td>
 			<td><?php echo $output[7];?></td>
 			<td><?php echo $output[10];?></td>
-			<td><a href="delete_terminate.php?hapus=<?php echo $output[0];?>&id=esurat" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>
+			<!-- <td><a href="delete_terminate.php?hapus=<?php echo $output[0];?>" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td> -->
 		</tr>
 	
 
@@ -102,4 +89,6 @@
 ?>	
 
 </table>
+</body>
 </form>
+</html>

@@ -1,6 +1,6 @@
 <?php
 
-$db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 password=EGOVPASS");
+    $db_connection = pg_connect("host=172.18.1.94 dbname=mon user=postgres password=dba.surabaya@2020");
 
 ?>
 
@@ -14,14 +14,47 @@ $db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 passw
 							</li>
 
 							<li>
-								<a href="#">Tekocak</a>
+								<a href="#">
+
+                                    <?php
+                                    
+                                        if($_GET['db'] == "ssw"){
+                                            echo "SSW";
+                                        }else if($_GET['db'] == "gakin"){
+                                            echo "Gakin";
+                                        }else if($_GET['db'] == "esurat"){
+                                            echo "Esurat";
+                                        }else if($_GET['db'] == "tekocak"){
+                                            echo "Tekocak";
+                                        }else if($_GET['db'] == "bumil"){
+                                            echo "Bumil";
+                                        }
+                                    
+                                    ?>
+
+                                </a>
 							</li>
-							<li class="active">Monitoring Size</li>
+							<li class="active">Monitoring Pengguna IP</li>
 						</ul><!-- /.breadcrumb -->
 	</div>
 	<div class="page-header">
         <h1>
-            Monitoring Tekocak
+        <?php
+        
+            if($_GET['db'] == "ssw"){
+                echo "Monitoring SSW";
+            }else if($_GET['db'] == "gakin"){
+                echo "Monitoring Gakin";
+            }else if($_GET['db'] == "esurat"){
+                echo "Monitoring Esurat";
+            }else if($_GET['db'] == "tekocak"){
+                echo "Monitoring Tekocak";
+            }else if($_GET['db'] == "bumil"){
+                echo "Monitoring Bumil";
+            }
+
+        ?>
+            
         </h1>
     </div>
 	<div class="content-panel">
@@ -29,18 +62,25 @@ $db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 passw
 	<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
 	
 		<tr>
-			<th class="detail-col">OID</th>
-			<th class="detail-col">Table Schema</th>
-			<th class="detail-col">Table Name</th>
-			<th class="detail-col">Total</th>
-			<th class="detail-col">Index </th>
-			<th class="detail-col">Table </th>
+			<th class="detail-col">Nama</th>
+			<th class="detail-col">IP</th>
 		</tr>
 
 <?php
 
-    $it = "SELECT *, pg_size_pretty(total_bytes) AS total, pg_size_pretty(index_bytes) AS INDEX, pg_size_pretty(toast_bytes) AS toast, pg_size_pretty(table_bytes) AS TABLE FROM (SELECT *, total_bytes-index_bytes-COALESCE(toast_bytes,0) AS table_bytes FROM (SELECT c.oid,nspname AS table_schema, relname AS TABLE_NAME, c.reltuples AS row_estimate, pg_total_relation_size(c.oid) AS total_bytes, pg_indexes_size(c.oid) AS index_bytes, pg_total_relation_size(reltoastrelid) AS toast_bytes FROM pg_class c LEFT JOIN pg_namespace n ON n.oid = c.relnamespace WHERE relkind = 'r' and nspname not in ('pg_catalog')) a) a order by a.table_schema asc ";
-
+    if($_GET['db'] == "ssw"){
+        $db_name = "ssw_234";
+    }else if($_GET['db'] == "gakin"){
+        $db_name = "gakin_0_245";
+    }else if($_GET['db'] == "esurat"){
+        $db_name = "esurat_233";
+    }else if($_GET['db'] == "tekocak"){
+        $db_name = "tekocak_34";
+    }else if($_GET['db'] == "bumil"){
+        $db_name = "bumil_191";
+    }
+    $it = "select nama, ip from master_pengguna_ip where db = '".$db_name."' order by nama asc";
+    // echo $it;
     $result = pg_query($db_connection, $it);
     while($output = pg_fetch_row($result)){
 
@@ -49,16 +89,12 @@ $db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 passw
         <tr>
             <td><?php echo $output[0];?></td>
             <td><?php echo $output[1];?></td>
-            <td><?php echo $output[2];?></td>
-            <td><?php echo $output[7];?></td>
-            <td><?php echo $output[8];?></td>
-            <td><?php echo $output[9];?></td>
         </tr>
 
 <?php
 
     }
-    pg_close($db_connection);
+     pg_close($db_connection);
 
 ?>
 

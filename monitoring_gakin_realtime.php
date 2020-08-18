@@ -7,7 +7,7 @@
 // $page = $_SERVER['home.php?halaman=monitoring_realtime'];
 // $sec = "2";
 
-$db_connection = pg_connect("host=172.18.0.245 dbname=gakin user=postgres password=admin245");
+$db_connection = pg_connect("host=172.18.0.245 dbname=postgres user=postgres password=admin245");
 	// $db_insert = pg_connect("host=172.18.1.244 dbname=mon user=postgres password=singlepostgreswindow");
 	
 ?>
@@ -54,8 +54,8 @@ $db_connection = pg_connect("host=172.18.0.245 dbname=gakin user=postgres passwo
 		
 
 <?php	
-	// $df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (EXTRACT(milliseconds FROM state_change - backend_start)) as time_per_milliseconds from pg_stat_activity where query != ''";
-	$df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (state_change - backend_start) as time_per_milliseconds, state from pg_stat_activity where query != ''";
+	// $df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (EXTRACT(milliseconds FROM state_change - query_start)) as time_per_milliseconds from pg_stat_activity where query != ''";
+	$df = "select pid, usename, application_name, client_addr, backend_start, query_start, waiting, query, datname, state_change, (state_change - query_start) as time_per_milliseconds, state from pg_stat_activity where query != ''";
 	// echo $df."<br>";
 	$result = pg_query($db_connection, $df);
 	while($output = pg_fetch_row($result)){

@@ -2,9 +2,9 @@
 // $page = $_SERVER['PHP_SELF'];
 // $sec = "2";
 
-	$db_connection = pg_connect("host=172.18.1.234 dbname=ssw user=postgres password=singlepostgreswindow");
-	// $db_insert = pg_connect("host=172.18.1.244 dbname=mon user=postgres password=singlepostgreswindow");
-	
+session_start();
+
+	$db_connection = pg_connect("host=172.18.1.234 dbname=ssw user=postgres password=singlepostgreswindow");	
 ?>
     <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
 	<form name="form1" method="post" id="form1">
@@ -28,7 +28,7 @@
 	</div>
 	<table border=0 align="right">
 		<tr>
-			<td><h3><strong>Hapus semua jika sudah lebih dari 30 menit</strong></h3></td>
+			<td><h3><strong>Hapus semua jika sudah lebih dari 30 menit </strong></h3></td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td><a href="#" class="btn btn-app btn-success" onClick="document.location.reload(true)">Reload</a>&nbsp;&nbsp;&nbsp;<a href="ssw_hapus_semua.php?hapus=ssw" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>
@@ -54,8 +54,8 @@
 		
 
 <?php	
-	// $df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (EXTRACT(milliseconds FROM state_change - backend_start)) as time_per_milliseconds from pg_stat_activity where query != ''";
-	$df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (state_change - backend_start) as time_per_milliseconds, state from pg_stat_activity where query != ''";
+	// $df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (EXTRACT(milliseconds FROM state_change - query_start)) as time_per_milliseconds from pg_stat_activity where query != ''";
+	$df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (state_change - query_start) as time_per_milliseconds, state from pg_stat_activity where query != ''";
 	// echo $df."<br>";
 	$result = pg_query($db_connection, $df);
 	while($output = pg_fetch_row($result)){
@@ -69,7 +69,18 @@
 			<td><?php echo $output[1];?></td>
 			<td><?php echo $output[2];?></td>
 			<td><?php echo $output[8];?></td>
-			<td><?php echo $output[3];?></td>
+			<td><?php echo $output[3];?><br />
+			<?php 
+			$tr = "select nama from master_pengguna_ip where ip = '".$output[3]."' and db = 'ssw_234'";
+			$yr = pg_query($db_insert, $tr);
+            while ($sr = pg_fetch_row($yr)) {
+                if($sr[0] != " "){
+                	echo $sr[0];
+            	}else{
+					echo "";
+				}
+            }
+			?></td>
 			<td><?php echo $output[4];?></td>
 			<td><?php echo $output[5];?></td>
 			<td><?php echo $output[9];?></td>

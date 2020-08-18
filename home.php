@@ -1,4 +1,8 @@
+<?php
 
+  session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,8 +15,8 @@
   <title>Monitoring Database Postgres</title>
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="img/500_F_125712670_cXZJuMoaei6pxIzWZnqqbDC1WA3DpQ9H.jpg" rel="icon">
+  <!-- <link href="img/cloudmonitoring.png" rel="cloudmonitoring"> -->
 
   <!-- Bootstrap core CSS -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -102,6 +106,28 @@
                 include_once "monitoring_gakin_realtime.php";
               } elseif($_GET['halaman'] == "gakin_size"){
                 include_once "monitoring_gakin_size.php";
+              } elseif($_GET['halaman'] == "monitoring_bumil"){
+                include_once "monitoring_bumil.php";
+              } elseif($_GET['halaman'] == "monitoring_realtime_bumil"){
+                include_once "monitoring_bumil_realtime.php";
+              } elseif($_GET['halaman'] == "bumil_size"){
+                include_once "monitoring_bumil_size.php";
+              }elseif($_GET['halaman'] == "gakin_user"){
+                include_once "monitoring_gakin_user.php";
+              }elseif($_GET['halaman'] == "ssw_user"){
+                include_once "monitoring_ssw_user.php";
+              }elseif($_GET['halaman'] == "tekocak_user"){
+                include_once "monitoring_tekocak_user.php";
+              }elseif($_GET['halaman'] == "esurat_user"){
+                include_once "monitoring_esurat_user.php";
+              }elseif($_GET['halaman'] == "bumil_user"){
+                include_once "monitoring_bumil_user.php";
+              }elseif($_GET['halaman'] == "daftar_ip"){
+                include_once "daftar_ip.php";
+              }elseif($_GET['halaman'] == "sql_85_realtime"){
+                include_once "monitoring_db_sql85_realtime.php";
+              }elseif($_GET['halaman'] == "sql_85"){
+                include_once "monitoring_db_sql.php";
               }
             
         ?>
