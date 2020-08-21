@@ -9,14 +9,14 @@ if (isset($_SESSION["nama"])) {
 }
 
 $db_ssw = pg_connect("host=172.18.1.234 dbname=ssw user=postgres password=singlepostgreswindow");
-<<<<<<< HEAD
-$db_mon = pg_connect("host=172.18.1.94 dbname=mon user=postgres password=dba.surabaya@2020");
-=======
->>>>>>> 15ecdb1a6c78dcd0b3afd8fdd80e97284a334470
+$db_ssw_dev = pg_connect("host=172.18.1.244 dbname=ssw_import user=postgres password=singlepostgreswindow");
 $db_esurat = pg_connect("host=172.18.1.233 dbname=esuratmerdeka user=postgres password=!TakonAe.Juan");
+$db_esurat_slave = pg_connect("host=172.18.20.31 dbname=esuratmerdeka user=postgres password=!TakonAe.Juan");
 $db_tekocak = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 password=EGOVPASS");
 $db_gakin = pg_connect("host=172.18.0.245 dbname=gakin user=postgres password=admin245");
 $db_bumil = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=dba.surabaya@2019");
+$db_mon = pg_connect("host=172.18.1.94 dbname=mon user=postgres password=dba.surabaya@2020");
+$db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres password=dba.Surabaya@2020");
 
 ?>
 
@@ -55,13 +55,8 @@ $db_bumil = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=d
 
                         ?>
                         <tr>
-<<<<<<< HEAD
-                            <td align="left">&nbsp;&nbsp;<?php echo $ssw[0];?></td>
-                            <td align="left">&nbsp;&nbsp;<?php echo $ssw[1];?></td>
-=======
                             <td><?php echo $ssw[0];?></td>
                             <td><?php echo $ssw[1];?></td>
->>>>>>> 15ecdb1a6c78dcd0b3afd8fdd80e97284a334470
                         </tr>
                         <?php
                             }
@@ -91,13 +86,8 @@ $db_bumil = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=d
 
                         ?>
                         <tr>
-<<<<<<< HEAD
-                            <td align="left">&nbsp;&nbsp;<?php echo $esurat[0];?></td>
-                            <td align="left">&nbsp;&nbsp;<?php echo $esurat[1];?></td>
-=======
                             <td><?php echo $esurat[0];?></td>
                             <td><?php echo $esurat[1];?></td>
->>>>>>> 15ecdb1a6c78dcd0b3afd8fdd80e97284a334470
                         </tr>
                         <?php
                             }
@@ -127,13 +117,8 @@ $db_bumil = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=d
 
                         ?>
                         <tr>
-<<<<<<< HEAD
-                            <td align="left">&nbsp;&nbsp;<?php echo $tekocak[0];?></td>
-                            <td align="left">&nbsp;&nbsp;<?php echo $tekocak[1];?></td>
-=======
                             <td><?php echo $tekocak[0];?></td>
                             <td><?php echo $tekocak[1];?></td>
->>>>>>> 15ecdb1a6c78dcd0b3afd8fdd80e97284a334470
                         </tr>
                         <?php
                             }
@@ -163,13 +148,8 @@ $db_bumil = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=d
 
                         ?>
                         <tr>
-<<<<<<< HEAD
-                            <td align="left">&nbsp;&nbsp;<?php echo $gakin[0];?></td>
-                            <td align="left">&nbsp;&nbsp;<?php echo $gakin[1];?></td>
-=======
                             <td><?php echo $gakin[0];?></td>
                             <td><?php echo $gakin[1];?></td>
->>>>>>> 15ecdb1a6c78dcd0b3afd8fdd80e97284a334470
                         </tr>
                         <?php
                             }
@@ -199,9 +179,8 @@ $db_bumil = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=d
 
                         ?>
                         <tr>
-<<<<<<< HEAD
-                            <td align="left">&nbsp;&nbsp;<?php echo $bumil[0];?></td>
-                            <td align="left">&nbsp;&nbsp;<?php echo $bumil[1];?></td>
+                            <td><?php echo $bumil[0];?></td>
+                            <td><?php echo $bumil[1];?></td>
                         </tr>
                         <?php
                             }
@@ -210,12 +189,12 @@ $db_bumil = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=d
                         </div>
                 </div>
               </div>
-			  
-			  <div class="col-md-2 col-sm-2 mb">
+
+              <div class="col-md-2 col-sm-2 mb">
                 <div class="grey-panel pn donut-chart">
                     <p>&nbsp;</p>
                   <div class="green-header" align="center">
-                    <h5>DISK SPACE MONITORING 94</h5>
+                    <h5>DISK SPACE MONITORING DB 50</h5>
                   </div>
                   <div class="adv-table">
                     <table cellpadding="0" cellspacing="0" border="1" align="center">
@@ -225,19 +204,110 @@ $db_bumil = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=d
                         </tr>
                         <?php
 
-                            $mn = "SELECT pg_database.datname as database_name, pg_size_pretty(pg_database_size(pg_database.datname)) AS size_in_mb FROM pg_database ORDER by size_in_mb DESC";
-							// echo $mn;
-                            $result_mon = pg_query($db_mon, $mn);
-	                        while($mon = pg_fetch_row($result_mon)){
+                            $gmm = "SELECT pg_database.datname as database_name, pg_size_pretty(pg_database_size(pg_database.datname)) AS size_in_mb FROM pg_database ORDER by size_in_mb DESC";
+                            $result_50 = pg_query($db_mon_50, $gmm);
+	                        while($mon_50 = pg_fetch_row($result_50)){
 
                         ?>
                         <tr>
-                            <td align="left">&nbsp;&nbsp;<?php echo $mon[0];?></td>
-                            <td align="left">&nbsp;&nbsp;<?php echo $mon[1];?></td>
-=======
-                            <td><?php echo $bumil[0];?></td>
-                            <td><?php echo $bumil[1];?></td>
->>>>>>> 15ecdb1a6c78dcd0b3afd8fdd80e97284a334470
+                            <td><?php echo $mon_50[0];?></td>
+                            <td><?php echo $mon_50[1];?></td>
+                        </tr>
+                        <?php
+                            }
+                        ?>
+                    </table>
+                        </div>
+                </div>
+              </div>
+
+              <div class="col-md-2 col-sm-2 mb">
+                <div class="grey-panel pn donut-chart">
+                    <p>&nbsp;</p>
+                  <div class="green-header" align="center">
+                    <h5>DISK SPACE SSW_dev 244</h5>
+                  </div>
+                  <div class="adv-table">
+                    <table cellpadding="0" cellspacing="0" border="1" align="center">
+                        <tr>
+                            <th class="detail-col"> Nama Database </th>
+                            <th class="detail-col"> Ukuran di MB </th>
+                        </tr>
+                        <?php
+
+                            $gq = "SELECT pg_database.datname as database_name, pg_size_pretty(pg_database_size(pg_database.datname)) AS size_in_mb FROM pg_database ORDER by size_in_mb DESC";
+                            // echo $gq;
+                            $result_ssw_dev = pg_query($db_ssw_dev, $gq);
+	                        while($ssw_dev = pg_fetch_row($result_ssw_dev)){
+
+                        ?>
+                        <tr>
+                            <td><?php echo $ssw_dev[0];?></td>
+                            <td><?php echo $ssw_dev[1];?></td>
+                        </tr>
+                        <?php
+                            }
+                        ?>
+                    </table>
+                        </div>
+                </div>
+              </div>
+
+              <div class="col-md-2 col-sm-2 mb">
+                <div class="grey-panel pn donut-chart">
+                    <p>&nbsp;</p>
+                  <div class="green-header" align="center">
+                    <h5>DISK SPACE MONITORING SEMUA DB 94</h5>
+                  </div>
+                  <div class="adv-table">
+                    <table cellpadding="0" cellspacing="0" border="1" align="center">
+                        <tr>
+                            <th class="detail-col"> Nama Database </th>
+                            <th class="detail-col"> Ukuran di MB </th>
+                        </tr>
+                        <?php
+
+                            $gs = "SELECT pg_database.datname as database_name, pg_size_pretty(pg_database_size(pg_database.datname)) AS size_in_mb FROM pg_database ORDER by size_in_mb DESC";
+                            // echo $gs;
+                            $resul_mon = pg_query($db_mon, $gs);
+	                        while($mon_94 = pg_fetch_row($result_mon)){
+
+                        ?>
+                        <tr>
+                            <td><?php echo $mon_94[0];?></td>
+                            <td><?php echo $mon_94[1];?></td>
+                        </tr>
+                        <?php
+                            }
+                        ?>
+                    </table>
+                        </div>
+                </div>
+              </div>
+
+              <div class="col-md-2 col-sm-2 mb">
+                <div class="grey-panel pn donut-chart">
+                    <p>&nbsp;</p>
+                  <div class="green-header" align="center">
+                    <h5>DISK SPACE SLAVE ESURAT</h5>
+                  </div>
+                  <div class="adv-table">
+                    <table cellpadding="0" cellspacing="0" border="1" align="center">
+                        <tr>
+                            <th class="detail-col"> Nama Database </th>
+                            <th class="detail-col"> Ukuran di MB </th>
+                        </tr>
+                        <?php
+
+                            $gse = "SELECT pg_database.datname as database_name, pg_size_pretty(pg_database_size(pg_database.datname)) AS size_in_mb FROM pg_database ORDER by size_in_mb DESC";
+                            // echo $gq;
+                            $resul_esurat_slave = pg_query($db_esurat_slave, $gse);
+	                        while($esurat_slave = pg_fetch_row($resul_esurat_slave)){
+
+                        ?>
+                        <tr>
+                            <td><?php echo $esurat_slave[0];?></td>
+                            <td><?php echo $esurat_slave[1];?></td>
                         </tr>
                         <?php
                             }

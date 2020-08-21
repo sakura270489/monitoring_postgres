@@ -3,10 +3,7 @@
 // $sec = "2";
 
 session_start();
-
-	$db_connection = pg_connect("host=172.18.1.234 dbname=ssw user=postgres password=singlepostgreswindow");
-	$db_insert = pg_connect("host=172.18.1.244 dbname=mon user=postgres password=singlepostgreswindow");
-	
+$db_connection = pg_connect("host=172.18.1.244 dbname=mon user=postgres password=singlepostgreswindow");
 ?>
     <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
 	<form name="form1" method="post" id="form1">
