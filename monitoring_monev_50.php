@@ -89,7 +89,7 @@ session_start();
 			<td><?php echo $output[11];?></td>
 			<td><?php echo $output[7];?></td>
 			<td><?php echo $output[10];?></td>
-			<td><a href="delete_terminate.php?hapus=<?php echo $output[0];?>&id=ssw" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>
+			<td><a href="delete_terminate.php?hapus=<?php echo $output[0];?>&id=monev" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>
 		</tr>
 	
 
