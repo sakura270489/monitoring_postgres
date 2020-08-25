@@ -128,6 +128,14 @@
                 include_once "monitoring_db_sql85_realtime.php";
               }elseif($_GET['halaman'] == "sql_85"){
                 include_once "monitoring_db_sql.php";
+              }elseif($_GET['halaman'] == "monitoring_realtime_monev"){
+                include_once "monitoring_monev_realtime.php";
+              }elseif($_GET['halaman'] == "monev_size"){
+                include_once "monitoring_monev_size.php";
+              }elseif($_GET['halaman'] == "monitoring_monev"){
+                include_once "monitoring_monev.php";
+              }elseif($_GET['halaman'] == "monev_user"){
+                include_once "monitoring_monev_user.php";
               }
             
         ?>

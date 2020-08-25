@@ -55,8 +55,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
 
                         ?>
                         <tr>
-                            <td><?php echo $ssw[0];?></td>
-                            <td><?php echo $ssw[1];?></td>
+                            <td align="left"><?php echo $ssw[0];?></td>
+                            <td align="left"><?php echo $ssw[1];?></td>
                         </tr>
                         <?php
                             }
@@ -86,8 +86,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
 
                         ?>
                         <tr>
-                            <td><?php echo $esurat[0];?></td>
-                            <td><?php echo $esurat[1];?></td>
+                            <td align="left"><?php echo $esurat[0];?></td>
+                            <td align="left"><?php echo $esurat[1];?></td>
                         </tr>
                         <?php
                             }
@@ -117,8 +117,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
 
                         ?>
                         <tr>
-                            <td><?php echo $tekocak[0];?></td>
-                            <td><?php echo $tekocak[1];?></td>
+                            <td align="left"><?php echo $tekocak[0];?></td>
+                            <td align="left"><?php echo $tekocak[1];?></td>
                         </tr>
                         <?php
                             }
@@ -148,8 +148,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
 
                         ?>
                         <tr>
-                            <td><?php echo $gakin[0];?></td>
-                            <td><?php echo $gakin[1];?></td>
+                            <td align="left"><?php echo $gakin[0];?></td>
+                            <td align="left"><?php echo $gakin[1];?></td>
                         </tr>
                         <?php
                             }
@@ -179,8 +179,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
 
                         ?>
                         <tr>
-                            <td><?php echo $bumil[0];?></td>
-                            <td><?php echo $bumil[1];?></td>
+                            <td align="left"><?php echo $bumil[0];?></td>
+                            <td align="left"><?php echo $bumil[1];?></td>
                         </tr>
                         <?php
                             }
@@ -210,8 +210,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
 
                         ?>
                         <tr>
-                            <td><?php echo $mon_50[0];?></td>
-                            <td><?php echo $mon_50[1];?></td>
+                            <td align="left"><?php echo $mon_50[0];?></td>
+                            <td align="left"><?php echo $mon_50[1];?></td>
                         </tr>
                         <?php
                             }
@@ -242,8 +242,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
 
                         ?>
                         <tr>
-                            <td><?php echo $ssw_dev[0];?></td>
-                            <td><?php echo $ssw_dev[1];?></td>
+                            <td align="left"><?php echo $ssw_dev[0];?></td>
+                            <td align="left"><?php echo $ssw_dev[1];?></td>
                         </tr>
                         <?php
                             }
@@ -269,13 +269,13 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
 
                             $gs = "SELECT pg_database.datname as database_name, pg_size_pretty(pg_database_size(pg_database.datname)) AS size_in_mb FROM pg_database ORDER by size_in_mb DESC";
                             // echo $gs;
-                            $resul_mon = pg_query($db_mon, $gs);
+                            $result_mon = pg_query($db_mon, $gs);
 	                        while($mon_94 = pg_fetch_row($result_mon)){
 
                         ?>
                         <tr>
-                            <td><?php echo $mon_94[0];?></td>
-                            <td><?php echo $mon_94[1];?></td>
+                            <td align="left"><?php echo $mon_94[0];?></td>
+                            <td align="left"><?php echo $mon_94[1];?></td>
                         </tr>
                         <?php
                             }
@@ -306,8 +306,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
 
                         ?>
                         <tr>
-                            <td><?php echo $esurat_slave[0];?></td>
-                            <td><?php echo $esurat_slave[1];?></td>
+                            <td align="left"><?php echo $esurat_slave[0];?></td>
+                            <td align="left"><?php echo $esurat_slave[1];?></td>
                         </tr>
                         <?php
                             }
