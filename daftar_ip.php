@@ -67,8 +67,9 @@
 	<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
 	
 		<tr>
-			<th class="detail-col">Nama</th>
-			<th class="detail-col">IP</th>
+			<th class="detail-col" align="center">Nama</th>
+			<th class="detail-col" align="center">IP</th>
+            <th class="detail-col" align="center">Action</th>
 		</tr>
 
 <?php
@@ -86,7 +87,7 @@
     }else if($_GET['db'] == "monev"){
         $db_name = "monev_50";
     }
-    $it = "select nama, ip from master_pengguna_ip where db = '".$db_name."' order by nama asc";
+    $it = "select nama, ip, db, id_ip from master_pengguna_ip where db = '".$db_name."' order by nama asc";
     // echo $it;
     $result = pg_query($db_connection, $it);
     while($output = pg_fetch_row($result)){
@@ -96,6 +97,7 @@
         <tr>
             <td><?php echo $output[0];?></td>
             <td><?php echo $output[1];?></td>
+            <td><a href='home.php?halaman=edit_daftar_ip&edit_ip=<?php echo $_GET['db'];?>&id=<?php echo $output[3]?>' class="btn btn-warning">Edit</a></td>
         </tr>
 
 <?php

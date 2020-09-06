@@ -136,6 +136,8 @@
                 include_once "monitoring_monev.php";
               }elseif($_GET['halaman'] == "monev_user"){
                 include_once "monitoring_monev_user.php";
+              }elseif($_GET['halaman'] == "edit_daftar_ip"){
+                include_once "edit_daftar_ip.php";
               }
             
         ?>
