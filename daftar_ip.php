@@ -2,6 +2,20 @@
 
     $db_connection = pg_connect("host=172.18.1.94 dbname=mon user=postgres password=dba.surabaya@2020");
 
+    if($_GET['db'] == "ssw"){
+        $db_name = "ssw_234";
+    }else if($_GET['db'] == "gakin"){
+        $db_name = "gakin_0_245";
+    }else if($_GET['db'] == "esurat"){
+        $db_name = "esurat_233";
+    }else if($_GET['db'] == "tekocak"){
+        $db_name = "tekocak_34";
+    }else if($_GET['db'] == "bumil"){
+        $db_name = "bumil_191";
+    }else if($_GET['db'] == "monev"){
+        $db_name = "monev_50";
+    }
+
 ?>
 
     <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
@@ -62,9 +76,26 @@
             
         </h1>
     </div>
-	<div class="content-panel">
-            <div class="adv-table">
-	<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
+    <table border=0 id="simple-table" class="table  table-bordered table-hover">
+		<tr>
+            <td class="detail-col">&nbsp;</td>
+			<td class="detail-col" align = "right">&nbsp;</td>
+            <td class="detail-col" align = "right">&nbsp;</td>
+            <td class="detail-col" align = "right">&nbsp;</td>
+            <td class="detail-col" align = "right">&nbsp;</td>
+            <td class="detail-col" align = "right">&nbsp;</td>
+            <td class="detail-col" align = "right">&nbsp;</td>
+            <td class="detail-col" align = "right">&nbsp;</td>
+            <td class="detail-col" align = "right">&nbsp;</td>
+            <td class="detail-col" align = "right">&nbsp;</td>
+            <td class="detail-col" align = "right">&nbsp;</td>
+			<td class="detail-col"><a href="home.php?halaman=tambah_ip&edit_ip=<?php echo $_GET['db'];?>" class="btn btn-app btn-danger btn-sm">Tambah</a></td>
+		</tr>
+	</table>
+	<p>&nbsp;</p>
+	<!-- <div class="content-panel">
+            <div class="adv-table"> -->
+	<table border=1 id="simple-table" class="table  table-bordered table-hover">
 	
 		<tr>
 			<th class="detail-col" align="center">Nama</th>
@@ -74,19 +105,6 @@
 
 <?php
 
-    if($_GET['db'] == "ssw"){
-        $db_name = "ssw_234";
-    }else if($_GET['db'] == "gakin"){
-        $db_name = "gakin_0_245";
-    }else if($_GET['db'] == "esurat"){
-        $db_name = "esurat_233";
-    }else if($_GET['db'] == "tekocak"){
-        $db_name = "tekocak_34";
-    }else if($_GET['db'] == "bumil"){
-        $db_name = "bumil_191";
-    }else if($_GET['db'] == "monev"){
-        $db_name = "monev_50";
-    }
     $it = "select nama, ip, db, id_ip from master_pengguna_ip where db = '".$db_name."' order by nama asc";
     // echo $it;
     $result = pg_query($db_connection, $it);
@@ -108,8 +126,8 @@
 ?>
 
 </table>
-</div>
-          </div>
+<!-- </div>
+          </div> -->
 
 <?php
 
