@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+
     $db_connection = pg_connect("host=172.18.1.94 dbname=mon user=postgres password=dba.surabaya@2020");
 
     if($_GET['db'] == "ssw"){
@@ -76,6 +78,10 @@
             
         </h1>
     </div>
+    <?php
+
+        if ($_SESSION['level'] == 1) {
+    ?>
     <table border=0 id="simple-table" class="table  table-bordered table-hover">
 		<tr>
             <td class="detail-col">&nbsp;</td>
@@ -89,10 +95,13 @@
             <td class="detail-col" align = "right">&nbsp;</td>
             <td class="detail-col" align = "right">&nbsp;</td>
             <td class="detail-col" align = "right">&nbsp;</td>
-			<td class="detail-col"><a href="home.php?halaman=tambah_ip&edit_ip=<?php echo $_GET['db'];?>" class="btn btn-app btn-danger btn-sm">Tambah</a></td>
+			<td class="detail-col"><a href="home.php?halaman=tambah_ip&edit_ip=<?php echo $_GET['db']; ?>" class="btn btn-app btn-danger btn-sm">Tambah</a></td>
 		</tr>
 	</table>
 	<p>&nbsp;</p>
+    <?php
+        }
+    ?>
 	<!-- <div class="content-panel">
             <div class="adv-table"> -->
 	<table border=1 id="simple-table" class="table  table-bordered table-hover">
@@ -100,7 +109,14 @@
 		<tr>
 			<th class="detail-col" align="center">Nama</th>
 			<th class="detail-col" align="center">IP</th>
+            <?php
+
+                  if ($_SESSION['level'] == 1) {
+            ?>
             <th class="detail-col" align="center">Action</th>
+            <?php
+                  }
+            ?>
 		</tr>
 
 <?php
@@ -115,7 +131,14 @@
         <tr>
             <td><?php echo $output[0];?></td>
             <td><?php echo $output[1];?></td>
-            <td><a href='home.php?halaman=edit_daftar_ip&edit_ip=<?php echo $_GET['db'];?>&id=<?php echo $output[3]?>' class="btn btn-warning">Edit</a></td>
+            <?php
+
+                  if ($_SESSION['level'] == 1) {
+            ?>
+            <td><a href='home.php?halaman=edit_daftar_ip&edit_ip=<?php echo $_GET['db']; ?>&id=<?php echo $output[3]?>' class="btn btn-warning">Edit</a></td>
+            <?php
+                  }
+            ?>
         </tr>
 
 <?php
