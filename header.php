@@ -1,3 +1,8 @@
+<?php
+
+  session_start();
+
+?>
 <!--header start-->
     <header class="header black-bg">
       <div class="sidebar-toggle-box">
@@ -193,7 +198,17 @@
       </div>
       <div class="top-menu">
         <ul class="nav pull-right top-menu">
+        <?php
+          if ($_SESSION['level'] == 1) {
+              ?>
           <li><a class="logout" href="logout.php">Logout</a></li>
+        <?php
+          }else{
+              ?>
+          <li><a class="logout" href="logout.php">Login</a></li>
+        <?php
+          }
+        ?>
         </ul>
       </div>
     </header>
