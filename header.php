@@ -205,7 +205,7 @@
         <?php
           }else{
               ?>
-          <li><a class="logout" href="logout.php">Login</a></li>
+          <li><a class="logout" href="login.php">Login</a></li>
         <?php
           }
         ?>
