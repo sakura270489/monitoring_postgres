@@ -9,6 +9,7 @@
 
 $db_connection = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=dba.surabaya@2019");
 	// $db_insert = pg_connect("host=172.18.1.244 dbname=mon user=postgres password=singlepostgreswindow");
+	$db_insert = pg_connect("host=172.18.1.94 dbname=mon user=postgres password=dba.surabaya@2020");
 	
 ?>
 <html>
@@ -54,13 +55,8 @@ $db_connection = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres passw
 		
 
 <?php	
-<<<<<<< HEAD
 	// $df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (EXTRACT(milliseconds FROM state_change - query_start)) as time_per_milliseconds from pg_stat_activity where query != ''";
 	$df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (state_change - query_start) as time_per_milliseconds, state from pg_stat_activity where query != ''";
-=======
-	// $df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (EXTRACT(milliseconds FROM state_change - backend_start)) as time_per_milliseconds from pg_stat_activity where query != ''";
-	$df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (state_change - backend_start) as time_per_milliseconds, state from pg_stat_activity where query != ''";
->>>>>>> 15ecdb1a6c78dcd0b3afd8fdd80e97284a334470
 	// echo $df."<br>";
 	$result = pg_query($db_connection, $df);
 	while($output = pg_fetch_row($result)){
@@ -74,7 +70,18 @@ $db_connection = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres passw
 			<td><?php echo $output[1];?></td>
 			<td><?php echo $output[2];?></td>
 			<td><?php echo $output[8];?></td>
-			<td><?php echo $output[3];?></td>
+			<td><?php echo $output[3];?><br />
+			<?php 
+			$tr = "select nama from master_pengguna_ip where ip = '".$output[3]."' and db = 'ssw_234'";
+			$yr = pg_query($db_insert, $tr);
+            while ($sr = pg_fetch_row($yr)) {
+                if($sr[0] != " "){
+                	echo $sr[0];
+            	}else{
+					echo "";
+				}
+            }
+			?></td>
 			<td><?php echo $output[4];?></td>
 			<td><?php echo $output[5];?></td>
 			<td><?php echo $output[9];?></td>

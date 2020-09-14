@@ -8,11 +8,7 @@
 // $sec = "2";
 
 	$db_connection = pg_connect("host=172.18.1.234 dbname=ssw user=postgres password=singlepostgreswindow");
-<<<<<<< HEAD
 	$db_insert = pg_connect("host=172.18.1.94 dbname=mon user=postgres password=dba.surabaya@2020");
-=======
-	$db_insert = pg_connect("host=172.18.1.244 dbname=mon user=postgres password=singlepostgreswindow");
->>>>>>> 15ecdb1a6c78dcd0b3afd8fdd80e97284a334470
 	
 ?>
 <html>
