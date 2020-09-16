@@ -186,6 +186,30 @@
               <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
             </ul>
           </li>
+
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-desktop"></i>
+              <span>DB SQL 40</span>
+              </a>
+            <ul class="sub">
+              <li><a href="home.php?halaman=sql_40_realtime">Monitoring Real Time</a></li>
+              <?php
+
+                  if ($_SESSION['level'] == 1) {
+                      ?>
+              <li><a href="home.php?halaman=sql_40">Monitoring Aktifitas</a></li>
+              <?php
+                  
+                  }
+              
+              ?>
+              <!--<li><a href="home.php?halaman=esurat_size">Monitoring Size</a></li>
+              <li><a href="home.php?halaman=esurat_user">Monitoring User</a></li>
+              <li><a href="home.php?halaman=daftar_ip&db=esurat">Monitoring Daftar IP</a></li>-->
+              <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
+            </ul>
+          </li>
           
         </ul>
         <!-- sidebar menu end-->

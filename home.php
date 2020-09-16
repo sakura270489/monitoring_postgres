@@ -140,6 +140,10 @@
                 include_once "edit_daftar_ip.php";
               }elseif($_GET['halaman'] == "tambah_ip"){
                 include_once "tambah_daftar_ip.php";
+              }elseif($_GET['halaman'] == "sql_40_realtime"){
+                include_once "monitoring_db_sql40_realtime.php";
+              }elseif($_GET['halaman'] == "sql_40"){
+                include_once "monitoring_db40_sql.php";
               }
             
         ?>
