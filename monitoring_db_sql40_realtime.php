@@ -27,7 +27,7 @@ if (!$conn) {
 ?>
 
 <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
-<body onload = "JavaScript:AutoRefresh(2000);">
+<body onload = "JavaScript:AutoRefresh(1000);">
 	<form name="form1" method="post" id="form1">
 	<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
@@ -37,14 +37,14 @@ if (!$conn) {
 							</li>
 
 							<li>
-								<a href="#">DB SQL 85</a>
+								<a href="#">DB SQL 40</a>
 							</li>
 							<li class="active">Monitoring Aktifitas</li>
 						</ul><!-- /.breadcrumb -->
 	</div>
 	<div class="page-header">
 		<h1>
-			Monitoring DB SQL 85
+			Monitoring DB SQL 40
 		</h1>
 	</div>
 	<p>&nbsp;</p>

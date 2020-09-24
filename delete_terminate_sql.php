@@ -28,6 +28,10 @@
 
     mysqli_close($conn);
 
-    echo "<script>location.href='home.php?halaman=sql_85';</script>";
+    if ($_GET['id'] == "db_sql85") {
+        echo "<script>location.href='home.php?halaman=sql_85';</script>";
+    }else if ($_GET['id'] == "db_sql40") {
+        echo "<script>location.href='home.php?halaman=sql_40';</script>";
+    }
 
 ?>

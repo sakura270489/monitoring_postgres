@@ -33,14 +33,14 @@ if (!$conn) {
 							</li>
 
 							<li>
-								<a href="#">DB SQL 85</a>
+								<a href="#">DB SQL 40</a>
 							</li>
 							<li class="active">Monitoring Aktifitas</li>
 						</ul><!-- /.breadcrumb -->
 	</div>
 	<div class="page-header">
 		<h1>
-			Monitoring DB SQL 85
+			Monitoring DB SQL 40
 		</h1>
 	</div>
 	<table border=0 align="right">

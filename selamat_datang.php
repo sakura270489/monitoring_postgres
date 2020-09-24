@@ -44,8 +44,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
                   <div class="adv-table">
                     <table cellpadding="0" cellspacing="0" border="1" align="center">
                         <tr>
-                            <th class="detail-col"> Nama Database </th>
-                            <th class="detail-col"> Ukuran di MB </th>
+                            <th class="detail-col">&nbsp; Nama Database &nbsp;</th>
+                            <th class="detail-col">&nbsp; Ukuran di MB &nbsp;</th>
                         </tr>
                         <?php
 
@@ -55,8 +55,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
 
                         ?>
                         <tr>
-                            <td align="left"><?php echo $ssw[0];?></td>
-                            <td align="left"><?php echo $ssw[1];?></td>
+                            <td align="left">&nbsp;<?php echo $ssw[0];?>&nbsp;</td>
+                            <td align="left">&nbsp;<?php echo $ssw[1];?>&nbsp;</td>
                         </tr>
                         <?php
                             }
@@ -75,8 +75,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
                   <div class="adv-table">
                     <table cellpadding="0" cellspacing="0" border="1" align="center">
                         <tr>
-                            <th class="detail-col"> Nama Database </th>
-                            <th class="detail-col"> Ukuran di MB </th>
+                            <th class="detail-col">&nbsp; Nama Database &nbsp;</th>
+                            <th class="detail-col">&nbsp; Ukuran di MB &nbsp;</th>
                         </tr>
                         <?php
 
@@ -86,8 +86,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
 
                         ?>
                         <tr>
-                            <td align="left"><?php echo $esurat[0];?></td>
-                            <td align="left"><?php echo $esurat[1];?></td>
+                            <td align="left">&nbsp;<?php echo $esurat[0];?>&nbsp;</td>
+                            <td align="left">&nbsp;<?php echo $esurat[1];?>&nbsp;</td>
                         </tr>
                         <?php
                             }
@@ -106,8 +106,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
                   <div class="adv-table">
                     <table cellpadding="0" cellspacing="0" border="1" align="center">
                         <tr>
-                            <th class="detail-col"> Nama Database </th>
-                            <th class="detail-col"> Ukuran di MB </th>
+                            <th class="detail-col">&nbsp; Nama Database &nbsp;</th>
+                            <th class="detail-col">&nbsp; Ukuran di MB &nbsp;</th>
                         </tr>
                         <?php
 
@@ -117,8 +117,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
 
                         ?>
                         <tr>
-                            <td align="left"><?php echo $tekocak[0];?></td>
-                            <td align="left"><?php echo $tekocak[1];?></td>
+                            <td align="left">&nbsp;<?php echo $tekocak[0];?>&nbsp;</td>
+                            <td align="left">&nbsp;<?php echo $tekocak[1];?>&nbsp;</td>
                         </tr>
                         <?php
                             }
@@ -137,8 +137,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
                   <div class="adv-table">
                     <table cellpadding="0" cellspacing="0" border="1" align="center">
                         <tr>
-                            <th class="detail-col"> Nama Database </th>
-                            <th class="detail-col"> Ukuran di MB </th>
+                            <th class="detail-col">&nbsp; Nama Database &nbsp;</th>
+                            <th class="detail-col">&nbsp; Ukuran di MB &nbsp;</th>
                         </tr>
                         <?php
 
@@ -148,8 +148,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
 
                         ?>
                         <tr>
-                            <td align="left"><?php echo $gakin[0];?></td>
-                            <td align="left"><?php echo $gakin[1];?></td>
+                            <td align="left">&nbsp;<?php echo $gakin[0];?>&nbsp;</td>
+                            <td align="left">&nbsp;<?php echo $gakin[1];?>&nbsp;</td>
                         </tr>
                         <?php
                             }
@@ -168,8 +168,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
                   <div class="adv-table">
                     <table cellpadding="0" cellspacing="0" border="1" align="center">
                         <tr>
-                            <th class="detail-col"> Nama Database </th>
-                            <th class="detail-col"> Ukuran di MB </th>
+                            <th class="detail-col">&nbsp; Nama Database &nbsp;</th>
+                            <th class="detail-col">&nbsp; Ukuran di MB &nbsp;</th>
                         </tr>
                         <?php
 
@@ -179,8 +179,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
 
                         ?>
                         <tr>
-                            <td align="left"><?php echo $bumil[0];?></td>
-                            <td align="left"><?php echo $bumil[1];?></td>
+                            <td align="left">&nbsp;<?php echo $bumil[0];?>&nbsp;</td>
+                            <td align="left">&nbsp;<?php echo $bumil[1];?>&nbsp;</td>
                         </tr>
                         <?php
                             }
@@ -199,8 +199,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
                   <div class="adv-table">
                     <table cellpadding="0" cellspacing="0" border="1" align="center">
                         <tr>
-                            <th class="detail-col"> Nama Database </th>
-                            <th class="detail-col"> Ukuran di MB </th>
+                            <th class="detail-col">&nbsp; Nama Database &nbsp;</th>
+                            <th class="detail-col">&nbsp; Ukuran di MB &nbsp;</th>
                         </tr>
                         <?php
 
@@ -210,8 +210,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
 
                         ?>
                         <tr>
-                            <td align="left"><?php echo $mon_50[0];?></td>
-                            <td align="left"><?php echo $mon_50[1];?></td>
+                            <td align="left">&nbsp;<?php echo $mon_50[0];?>&nbsp;</td>
+                            <td align="left">&nbsp;<?php echo $mon_50[1];?>&nbsp;</td>
                         </tr>
                         <?php
                             }
@@ -230,8 +230,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
                   <div class="adv-table">
                     <table cellpadding="0" cellspacing="0" border="1" align="center">
                         <tr>
-                            <th class="detail-col"> Nama Database </th>
-                            <th class="detail-col"> Ukuran di MB </th>
+                            <th class="detail-col">&nbsp; Nama Database &nbsp;</th>
+                            <th class="detail-col">&nbsp; Ukuran di MB &nbsp;</th>
                         </tr>
                         <?php
 
@@ -242,8 +242,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
 
                         ?>
                         <tr>
-                            <td align="left"><?php echo $ssw_dev[0];?></td>
-                            <td align="left"><?php echo $ssw_dev[1];?></td>
+                            <td align="left">&nbsp;<?php echo $ssw_dev[0];?>&nbsp;</td>
+                            <td align="left">&nbsp;<?php echo $ssw_dev[1];?>&nbsp;</td>
                         </tr>
                         <?php
                             }
@@ -262,8 +262,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
                   <div class="adv-table">
                     <table cellpadding="0" cellspacing="0" border="1" align="center">
                         <tr>
-                            <th class="detail-col"> Nama Database </th>
-                            <th class="detail-col"> Ukuran di MB </th>
+                            <th class="detail-col">&nbsp; Nama Database &nbsp;</th>
+                            <th class="detail-col">&nbsp; Ukuran di MB &nbsp;</th>
                         </tr>
                         <?php
 
@@ -274,8 +274,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
 
                         ?>
                         <tr>
-                            <td align="left"><?php echo $mon_94[0];?></td>
-                            <td align="left"><?php echo $mon_94[1];?></td>
+                            <td align="left">&nbsp;<?php echo $mon_94[0];?>&nbsp;</td>
+                            <td align="left">&nbsp;<?php echo $mon_94[1];?>&nbsp;</td>
                         </tr>
                         <?php
                             }
@@ -294,8 +294,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
                   <div class="adv-table">
                     <table cellpadding="0" cellspacing="0" border="1" align="center">
                         <tr>
-                            <th class="detail-col"> Nama Database </th>
-                            <th class="detail-col"> Ukuran di MB </th>
+                            <th class="detail-col">&nbsp; Nama Database &nbsp;</th>
+                            <th class="detail-col">&nbsp; Ukuran di MB &nbsp;</th>
                         </tr>
                         <?php
 
@@ -306,8 +306,8 @@ $db_mon_50 = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres passwo
 
                         ?>
                         <tr>
-                            <td align="left"><?php echo $esurat_slave[0];?></td>
-                            <td align="left"><?php echo $esurat_slave[1];?></td>
+                            <td align="left">&nbsp;<?php echo $esurat_slave[0];?>&nbsp;</td>
+                            <td align="left">&nbsp;<?php echo $esurat_slave[1];?>&nbsp;</td>
                         </tr>
                         <?php
                             }
