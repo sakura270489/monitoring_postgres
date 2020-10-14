@@ -16,6 +16,10 @@
         $db_name = "bumil_191";
     }else if($_GET['db'] == "monev"){
         $db_name = "monev_50";
+    }else if($_GET['db'] == "wdh_40"){
+        $db_name = "wdh_40";
+    }else if($_GET['db'] == "apel"){
+        $db_name = "apel";
     }
 
 ?>
@@ -45,8 +49,11 @@
                                         }else if($_GET['db'] == "bumil"){
                                             echo "Bumil";
                                         }else if($_GET['db'] == "monev"){
-
                                             echo "EMONEV";
+                                        }else if($_GET['db'] == "wdh_40"){
+                                            echo "WDH";
+                                        }else if($_GET['db'] == "apel"){
+                                            echo "Apel Petang";
                                         }
                                     
                                     ?>
@@ -72,6 +79,10 @@
                 echo "Monitoring Bumil";
             }else if($_GET['db'] == "monev"){
                 echo "Monitoring Emonev 50";
+            }else if($_GET['db'] == "wdh_40"){
+                echo "Monitoring WDH";
+            }else if($_GET['db'] == "apel"){
+                echo "Monitoring Apel Petang";
             }
 
         ?>
@@ -101,7 +112,13 @@
 	<p>&nbsp;</p>
     <?php
         }
-    ?>
+
+        $pw = "select count(db) as jumlah from master_pengguna_ip";
+        $gd = pg_query($db_connection, $pw);
+        $ms = pg_fetch_row($gd);
+
+        if ($ms[0] > 0) {
+            ?>
 	<!-- <div class="content-panel">
             <div class="adv-table"> -->
 	<table border=1 id="simple-table" class="table  table-bordered table-hover">
@@ -112,47 +129,44 @@
             <?php
 
                   if ($_SESSION['level'] == 1) {
-            ?>
+                      ?>
             <th class="detail-col" align="center">Action</th>
             <?php
-                  }
-            ?>
+                  } ?>
 		</tr>
 
 <?php
 
     $it = "select nama, ip, db, id_ip from master_pengguna_ip where db = '".$db_name."' order by nama asc";
-    // echo $it;
-    $result = pg_query($db_connection, $it);
-    while($output = pg_fetch_row($result)){
-
-?>
+            // echo $it;
+            $result = pg_query($db_connection, $it);
+            while ($output = pg_fetch_row($result)) {
+                ?>
 
         <tr>
-            <td><?php echo $output[0];?></td>
-            <td><?php echo $output[1];?></td>
+            <td><?php echo $output[0]; ?></td>
+            <td><?php echo $output[1]; ?></td>
             <?php
 
                   if ($_SESSION['level'] == 1) {
-            ?>
+                      ?>
             <td><a href='home.php?halaman=edit_daftar_ip&edit_ip=<?php echo $_GET['db']; ?>&id=<?php echo $output[3]?>' class="btn btn-warning">Edit</a></td>
             <?php
-                  }
-            ?>
+                  } ?>
         </tr>
 
 <?php
-
-    }
-    pg_close($db_connection);
-
-?>
+            }
+            pg_close($db_connection); ?>
 
 </table>
 <!-- </div>
           </div> -->
 
 <?php
+        }else{
+            echo "&nbsp;";
+        }
 
 //  select count(*) from ....
 

@@ -45,7 +45,11 @@
             $db_name = "bumil_191";
         }else if($_GET['edit_ip'] == "monev"){
             $db_name = "monev_50";
-        }
+        }else if($_GET['edit_ip'] == "wdh_40"){
+            $db_name = "wdh_40";
+        }else if($_GET['edit_ip'] == "apel"){
+          $db_name = "apel";
+      }
 
         $op = "insert into master_pengguna_ip (nama, ip, db) values ('".$_POST["nama"]."', '".$_POST["ip"]."', '".$db_name."')";
         // echo $op."<br>";
@@ -66,7 +70,11 @@
             echo "<script>location.href='home.php?halaman=daftar_ip&db=bumil';</script>";
         }else if($_GET['edit_ip'] == "monev"){
             echo "<script>location.href='home.php?halaman=daftar_ip&db=monev';</script>";
-        }
+        }else if($_GET['edit_ip'] == "wdh_40"){
+            echo "<script>location.href='home.php?halaman=daftar_ip&db=wdh_40';</script>";
+        }else if($_GET['edit_ip'] == "apel"){
+          echo "<script>location.href='home.php?halaman=daftar_ip&db=apel';</script>";
+      }
 		
     }
 

@@ -12,6 +12,10 @@ if($_GET['id'] == "ssw"){
     $db_connection = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=dba.surabaya@2019");
 }elseif($_GET['id'] == "monev"){
     $db_connection = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres password=dba.Surabaya@2020");
+}elseif($_GET['id'] == "wdh_44"){
+    $db_connection = pg_connect("host=172.18.0.44 dbname=wdh_2020 user=postgres password=dba.surabaya@2020");
+}elseif($_GET['id'] == "apel"){
+    $db_connection = pg_connect("host=172.18.0.103 dbname=ppt user=postgres password=dba.surabaya@2020");
 }
 
 // $yr = "select pg_terminate_backend(pid), query from pg_stat_activity where pid = ".$_GET['hapus']." and state = 'idle'";
@@ -36,6 +40,10 @@ if($_GET['id'] == "ssw"){
 	echo "<script>location.href='home.php?halaman=monitoring_bumil';</script>";
 }else if($_GET['id'] == "monev"){
     echo "<script>location.href='home.php?halaman=monitoring_monev_50';</script>";
+}else if($_GET['id'] == "wdh_44"){
+    echo "<script>location.href='home.php?halaman=monitoring_wdh';</script>";
+}else if($_GET['id'] == "apel"){
+    echo "<script>location.href='home.php?halaman=monitoring_apel';</script>";
 }
 
 ?>

@@ -10,6 +10,12 @@
 		$db_connection = pg_connect("host=172.18.0.245 dbname=gakin user=postgres password=admin245");
 	}elseif($_GET['hapus'] == "bumil"){
 		$db_connection = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=dba.surabaya@2019");
+	}elseif($_GET['hapus'] == "monev"){
+		$db_connection = pg_connect("host=172.18.0.50 dbname=monitoring user=postgres password=dba.Surabaya@2020");
+	}elseif($_GET['hapus'] == "wdh_44"){
+		$db_connection = pg_connect("host=172.18.0.44 dbname=wdh_2020 user=postgres password=dba.surabaya@2020");
+	}elseif($_GET['hapus'] == "apel"){
+		$db_connection = pg_connect("host=172.18.0.103 dbname=ppt user=postgres password=dba.surabaya@2020");
 	}
 
 
@@ -55,6 +61,12 @@
 				echo "<script>location.href='home.php?halaman=monitoring_tekocak';</script>";
 			}else if($_GET['hapus'] == "bumil"){
 				echo "<script>location.href='home.php?halaman=monitoring_bumil';</script>";
+			}else if($_GET['hapus'] == "monev"){
+				echo "<script>location.href='home.php?halaman=monitoring_monev_50';</script>";
+			}else if($_GET['hapus'] == "wdh_44"){
+				echo "<script>location.href='home.php?halaman=monitoring_wdh';</script>";
+			}else if($_GET['hapus'] == "apel"){
+				echo "<script>location.href='home.php?halaman=monitoring_apel';</script>";
 			}
 			
 			

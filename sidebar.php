@@ -143,6 +143,29 @@
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-desktop"></i>
+              <span>WDH</span>
+              </a>
+            <ul class="sub">
+              <li><a href="home.php?halaman=monitoring_realtime_wdh">Monitoring Real Time</a></li>
+              <?php
+
+                  if ($_SESSION['level'] == 1) {
+                      ?>
+              <li><a href="home.php?halaman=monitoring_wdh">Monitoring Aktifitas</a></li>
+              <?php
+                  }
+              
+              ?>
+              <li><a href="home.php?halaman=wdh_size">Monitoring Size</a></li>
+              <li><a href="home.php?halaman=wdh_user">Monitoring User</a></li>
+              <li><a href="home.php?halaman=daftar_ip&db=wdh_40">Monitoring Daftar IP</a></li>
+              <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
+            </ul>
+          </li>
+
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-desktop"></i>
               <span>Emonev</span>
               </a>
             <ul class="sub">
@@ -159,6 +182,29 @@
               <li><a href="home.php?halaman=monev_size">Monitoring Size</a></li>
               <li><a href="home.php?halaman=monev_user">Monitoring User</a></li>
               <li><a href="home.php?halaman=daftar_ip&db=monev">Monitoring Daftar IP</a></li>
+              <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
+            </ul>
+          </li>
+
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-desktop"></i>
+              <span>Apel Petang</span>
+              </a>
+            <ul class="sub">
+              <li><a href="home.php?halaman=monitoring_realtime_apel">Monitoring Real Time</a></li>
+              <?php
+
+                  if ($_SESSION['level'] == 1) {
+                      ?>
+              <li><a href="home.php?halaman=monitoring_apel">Monitoring Aktifitas</a></li>
+              <?php
+                  }
+              
+              ?>
+              <li><a href="home.php?halaman=apel_size">Monitoring Size</a></li>
+              <li><a href="home.php?halaman=apel_user">Monitoring User</a></li>
+              <li><a href="home.php?halaman=daftar_ip&db=apel">Monitoring Daftar IP</a></li>
               <!-- <li><a href="font_awesome.html">Font Awesome</a></li> -->
             </ul>
           </li>

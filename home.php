@@ -144,6 +144,22 @@
                 include_once "monitoring_db_sql40_realtime.php";
               }elseif($_GET['halaman'] == "sql_40"){
                 include_once "monitoring_db40_sql.php";
+              }elseif($_GET['halaman'] == "monitoring_realtime_wdh"){
+                include_once "monitoring_wdh_realtime.php";
+              }elseif($_GET['halaman'] == "monitoring_wdh"){
+                include_once "monitoring_wdh.php";
+              }elseif($_GET['halaman'] == "wdh_size"){
+                include_once "monitoring_wdh_size.php";
+              }elseif($_GET['halaman'] == "wdh_user"){
+                include_once "monitoring_wdh_user.php";
+              }elseif($_GET['halaman'] == "monitoring_apel"){
+                include_once "monitoring_apel.php";
+              }elseif($_GET['halaman'] == "monitoring_realtime_apel"){
+                include_once "monitoring_apel_realtime.php";
+              }elseif($_GET['halaman'] == "apel_size"){
+                include_once "monitoring_apel_size.php";
+              }elseif($_GET['halaman'] == "apel_user"){
+                include_once "monitoring_apel_user.php";
               }
             
         ?>

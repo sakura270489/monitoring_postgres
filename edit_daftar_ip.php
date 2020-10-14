@@ -54,7 +54,9 @@
             echo "<script>location.href='home.php?halaman=daftar_ip&db=bumil';</script>";
         }else if($_GET['edit_ip'] == "monev"){
             echo "<script>location.href='home.php?halaman=daftar_ip&db=monev';</script>";
-        }
+        }else if($_GET['edit_ip'] == "wdh_40"){
+          echo "<script>location.href='home.php?halaman=daftar_ip&db=wdh_40';</script>";
+      }
 		
     }
 
