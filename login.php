@@ -63,7 +63,7 @@ $db_connection = pg_connect("host=172.18.1.94 dbname=mon user=postgres password=
 
     if ($_POST["login"]) {
         $yr = "select nama_user, password_user, level from master_user where nama_user = '".$_POST["nama"]."' and password_user = '".$_POST["password"]."'";
-        // echo $yr."<br>";
+        // echo $yr."<br>";exit;
         $result = pg_query($db_connection, $yr);
         while ($hasil = pg_fetch_row($result)) {
             //echo $hasil[0]."<br>".$hasil[1];
