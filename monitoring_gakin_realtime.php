@@ -7,15 +7,16 @@
 // $page = $_SERVER['home.php?halaman=monitoring_realtime'];
 // $sec = "2";
 
-$db_connection = pg_connect("host=172.18.0.245 dbname=gakin user=postgres password=admin245");
+$db_connection = pg_connect("host=172.18.0.245 dbname=postgres user=postgres password=admin245");
 	// $db_insert = pg_connect("host=172.18.1.244 dbname=mon user=postgres password=singlepostgreswindow");
+	$db_insert = pg_connect("host=172.18.1.94 dbname=mon user=postgres password=dba.surabaya@2020");
 	
 ?>
 <html>
     <head>
     <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
     </head>
-    <body onload = "JavaScript:AutoRefresh(2000);">
+    <body onload = "JavaScript:AutoRefresh(1000);">
 	<form name="form1" method="post" id="form1" >
 	<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
@@ -54,8 +55,9 @@ $db_connection = pg_connect("host=172.18.0.245 dbname=gakin user=postgres passwo
 		
 
 <?php	
-	// $df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (EXTRACT(milliseconds FROM state_change - backend_start)) as time_per_milliseconds from pg_stat_activity where query != ''";
-	$df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (state_change - backend_start) as time_per_milliseconds, state from pg_stat_activity where query != ''";
+	// $df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (EXTRACT(milliseconds FROM state_change - query_start)) as time_per_milliseconds from pg_stat_activity where query != ''";
+	// $df = "select pid, usename, application_name, client_addr, backend_start, query_start, waiting, query, datname, state_change, (state_change - query_start) as time_per_milliseconds, state from pg_stat_activity where query != '' order by state asc";
+	$df = "select pid, usename, application_name, client_addr, backend_start, query_start, waiting, query, datname, state_change, (current_timestamp - query_start) as time_per_milliseconds, state from pg_stat_activity where state != 'idle' order by time_per_milliseconds desc";
 	// echo $df."<br>";
 	$result = pg_query($db_connection, $df);
 	while($output = pg_fetch_row($result)){
@@ -69,7 +71,18 @@ $db_connection = pg_connect("host=172.18.0.245 dbname=gakin user=postgres passwo
 			<td><?php echo $output[1];?></td>
 			<td><?php echo $output[2];?></td>
 			<td><?php echo $output[8];?></td>
-			<td><?php echo $output[3];?></td>
+			<td><?php echo $output[3];?><br />
+			<?php 
+			$tr = "select nama from master_pengguna_ip where ip = '".$output[3]."' and db = 'ssw_234'";
+			$yr = pg_query($db_insert, $tr);
+            while ($sr = pg_fetch_row($yr)) {
+                if($sr[0] != " "){
+                	echo $sr[0];
+            	}else{
+					echo "";
+				}
+            }
+			?></td>
 			<td><?php echo $output[4];?></td>
 			<td><?php echo $output[5];?></td>
 			<td><?php echo $output[9];?></td>

@@ -1,4 +1,8 @@
+<?php
 
+  session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,8 +15,8 @@
   <title>Monitoring Database Postgres</title>
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="img/500_F_125712670_cXZJuMoaei6pxIzWZnqqbDC1WA3DpQ9H.jpg" rel="icon">
+  <!-- <link href="img/cloudmonitoring.png" rel="cloudmonitoring"> -->
 
   <!-- Bootstrap core CSS -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -102,6 +106,68 @@
                 include_once "monitoring_gakin_realtime.php";
               } elseif($_GET['halaman'] == "gakin_size"){
                 include_once "monitoring_gakin_size.php";
+              } elseif($_GET['halaman'] == "monitoring_bumil"){
+                include_once "monitoring_bumil.php";
+              } elseif($_GET['halaman'] == "monitoring_realtime_bumil"){
+                include_once "monitoring_bumil_realtime.php";
+              } elseif($_GET['halaman'] == "bumil_size"){
+                include_once "monitoring_bumil_size.php";
+              }elseif($_GET['halaman'] == "gakin_user"){
+                include_once "monitoring_gakin_user.php";
+              }elseif($_GET['halaman'] == "ssw_user"){
+                include_once "monitoring_ssw_user.php";
+              }elseif($_GET['halaman'] == "tekocak_user"){
+                include_once "monitoring_tekocak_user.php";
+              }elseif($_GET['halaman'] == "esurat_user"){
+                include_once "monitoring_esurat_user.php";
+              }elseif($_GET['halaman'] == "bumil_user"){
+                include_once "monitoring_bumil_user.php";
+              }elseif($_GET['halaman'] == "daftar_ip"){
+                include_once "daftar_ip.php";
+              }elseif($_GET['halaman'] == "sql_85_realtime"){
+                include_once "monitoring_db_sql85_realtime.php";
+              }elseif($_GET['halaman'] == "sql_85"){
+                include_once "monitoring_db_sql.php";
+              }elseif($_GET['halaman'] == "monitoring_realtime_monev"){
+                include_once "monitoring_monev_realtime.php";
+              }elseif($_GET['halaman'] == "monev_size"){
+                include_once "monitoring_monev_size.php";
+              }elseif($_GET['halaman'] == "monitoring_monev"){
+                include_once "monitoring_monev.php";
+              }elseif($_GET['halaman'] == "monev_user"){
+                include_once "monitoring_monev_user.php";
+              }elseif($_GET['halaman'] == "edit_daftar_ip"){
+                include_once "edit_daftar_ip.php";
+              }elseif($_GET['halaman'] == "tambah_ip"){
+                include_once "tambah_daftar_ip.php";
+              }elseif($_GET['halaman'] == "sql_40_realtime"){
+                include_once "monitoring_db_sql40_realtime.php";
+              }elseif($_GET['halaman'] == "sql_40"){
+                include_once "monitoring_db40_sql.php";
+              }elseif($_GET['halaman'] == "monitoring_realtime_wdh"){
+                include_once "monitoring_wdh_realtime.php";
+              }elseif($_GET['halaman'] == "monitoring_wdh"){
+                include_once "monitoring_wdh.php";
+              }elseif($_GET['halaman'] == "wdh_size"){
+                include_once "monitoring_wdh_size.php";
+              }elseif($_GET['halaman'] == "wdh_user"){
+                include_once "monitoring_wdh_user.php";
+              }elseif($_GET['halaman'] == "monitoring_apel"){
+                include_once "monitoring_apel.php";
+              }elseif($_GET['halaman'] == "monitoring_realtime_apel"){
+                include_once "monitoring_apel_realtime.php";
+              }elseif($_GET['halaman'] == "apel_size"){
+                include_once "monitoring_apel_size.php";
+              }elseif($_GET['halaman'] == "apel_user"){
+                include_once "monitoring_apel_user.php";
+              }elseif($_GET['halaman'] == "tambah_pengguna_db"){
+                include_once "insert_pengguna_db.php";
+              }elseif($_GET['halaman'] == "daftar_pengguna_db"){
+                include_once "daftar_pengguna_db.php";
+              }elseif($_GET['halaman'] == "tambah_db"){
+                include_once "insert_db.php";
+              }elseif($_GET['halaman'] == "daftar_db"){
+                include_once "daftar_db.php";
               }
             
         ?>

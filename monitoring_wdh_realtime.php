@@ -7,8 +7,7 @@
 // $page = $_SERVER['home.php?halaman=monitoring_realtime'];
 // $sec = "2";
 
-$db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 password=EGOVPASS");
-	// $db_insert = pg_connect("host=172.18.1.244 dbname=mon user=postgres password=singlepostgreswindow");
+	$db_connection = pg_connect("host=172.18.0.44 dbname=wdh_2020 user=postgres password=dba.surabaya@2020");
 	$db_insert = pg_connect("host=172.18.1.94 dbname=mon user=postgres password=dba.surabaya@2020");
 	
 ?>
@@ -26,14 +25,14 @@ $db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 passw
 							</li>
 
 							<li>
-								<a href="#">Tekocak</a>
+								<a href="#">WDH</a>
 							</li>
 							<li class="active">Monitoring Realtime</li>
 						</ul><!-- /.breadcrumb -->
 	</div>
 	<div class="page-header">
         <h1>
-            Monitoring Tekocak
+            Monitoring WDH
         </h1>
     </div>
 	<table border=1 id="simple-table" class="table  table-bordered table-hover">
@@ -65,13 +64,13 @@ $db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 passw
 ?>
 <?php
 	$output[7] = pg_escape_string($output[7]);
-?>
+        ?>
 		<tr>
-			<td><?php echo $output[0];?></td>
-			<td><?php echo $output[1];?></td>
-			<td><?php echo $output[2];?></td>
-			<td><?php echo $output[8];?></td>
-			<td><?php echo $output[3];?><br />
+			<td><?php echo $output[0]; ?></td>
+			<td><?php echo $output[1]; ?></td>
+			<td><?php echo $output[2]; ?></td>
+			<td><?php echo $output[8]; ?></td>
+			<td><?php echo $output[3]; ?><br />
 			<?php 
 			$tr = "select nama from master_pengguna_ip where ip = '".$output[3]."' and db = 'ssw_234'";
 			$yr = pg_query($db_insert, $tr);
@@ -82,18 +81,20 @@ $db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 passw
 					echo "";
 				}
             }
-			?></td>
-			<td><?php echo $output[4];?></td>
-			<td><?php echo $output[5];?></td>
-			<td><?php echo $output[9];?></td>
-			<td><?php echo $output[11];?></td>
-			<td><?php echo $output[7];?></td>
-			<td><?php echo $output[10];?></td>
-			<!-- <td><a href="delete_terminate.php?hapus=<?php echo $output[0];?>" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td> -->
+			?>
+			</td>
+			<td><?php echo $output[4]; ?></td>
+			<td><?php echo $output[5]; ?></td>
+			<td><?php echo $output[9]; ?></td>
+			<td><?php echo $output[11]; ?></td>
+			<td><?php echo $output[7]; ?></td>
+			<td><?php echo $output[10]; ?></td>
+			<!-- <td><a href="delete_terminate.php?hapus=<?php echo $output[0]; ?>" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td> -->
 		</tr>
 	
 
 <?php
+    // }
 		
 	}
 	

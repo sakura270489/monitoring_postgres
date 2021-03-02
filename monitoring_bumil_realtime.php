@@ -1,14 +1,23 @@
+<script type = "text/JavaScript">
+            function AutoRefresh( t ) {
+               setTimeout("location.reload(true);", t);
+            }
+      </script>
 <?php
-// $page = $_SERVER['PHP_SELF'];
+// $page = $_SERVER['home.php?halaman=monitoring_realtime'];
 // $sec = "2";
 
-$db_connection = pg_connect("host=172.18.0.245 dbname=postgres user=postgres password=admin245");
+$db_connection = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=dba.surabaya@2019");
 	// $db_insert = pg_connect("host=172.18.1.244 dbname=mon user=postgres password=singlepostgreswindow");
 	$db_insert = pg_connect("host=172.18.1.94 dbname=mon user=postgres password=dba.surabaya@2020");
 	
 ?>
+<html>
+    <head>
     <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
-	<form name="form1" method="post" id="form1">
+    </head>
+    <body onload = "JavaScript:AutoRefresh(1000);">
+	<form name="form1" method="post" id="form1" >
 	<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
 							<li>
@@ -17,25 +26,16 @@ $db_connection = pg_connect("host=172.18.0.245 dbname=postgres user=postgres pas
 							</li>
 
 							<li>
-								<a href="#">Gakin</a>
+								<a href="#">Bumil</a>
 							</li>
-							<li class="active">Monitoring Aktifitas</li>
+							<li class="active">Monitoring Realtime</li>
 						</ul><!-- /.breadcrumb -->
 	</div>
 	<div class="page-header">
-		<h1>
-			Monitoring Gakin
-		</h1>
-	</div>
-	<table border=0 align="right">
-		<tr>
-			<td><h3><strong>Hapus semua jika sudah lebih dari 30 menit</strong></h3></td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td><a href="#" class="btn btn-app btn-success" onClick="document.location.reload(true)">Reload</a>&nbsp;&nbsp;&nbsp;<a href="ssw_hapus_semua.php?hapus=gakin" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>
-		</tr>
-	</table>
-	<p>&nbsp;</p>
+        <h1>
+            Monitoring Bumil
+        </h1>
+    </div>
 	<table border=1 id="simple-table" class="table  table-bordered table-hover">
 	
 		<tr>
@@ -50,14 +50,14 @@ $db_connection = pg_connect("host=172.18.0.245 dbname=postgres user=postgres pas
 			<th class="detail-col">State</th>
 			<th class="detail-col">Query</th>
 			<th class="detail-col">Time Per Milliseconds</th>
-			<th class="detail-col">Action</th>
+			<!-- <th class="detail-col">Action</th> -->
 		</tr>
 		
 
 <?php	
 	// $df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (EXTRACT(milliseconds FROM state_change - query_start)) as time_per_milliseconds from pg_stat_activity where query != ''";
-	// $df = "select pid, usename, application_name, client_addr, backend_start, query_start, waiting, query, datname, state_change, (state_change - query_start) as time_per_milliseconds, state from pg_stat_activity where query != '' order by state asc";
-	$df = "select pid, usename, application_name, client_addr, backend_start, query_start, waiting, query, datname, state_change, (current_timestamp - query_start) as time_per_milliseconds, state from pg_stat_activity where state != 'idle' order by time_per_milliseconds desc";
+	// $df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (state_change - query_start) as time_per_milliseconds, state from pg_stat_activity where query != ''";
+	$df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (current_timestamp - query_start) as time_per_milliseconds, state from pg_stat_activity where query != ''";
 	// echo $df."<br>";
 	$result = pg_query($db_connection, $df);
 	while($output = pg_fetch_row($result)){
@@ -89,7 +89,7 @@ $db_connection = pg_connect("host=172.18.0.245 dbname=postgres user=postgres pas
 			<td><?php echo $output[11];?></td>
 			<td><?php echo $output[7];?></td>
 			<td><?php echo $output[10];?></td>
-			<td><a href="delete_terminate.php?hapus=<?php echo $output[0];?>&id=gakin" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td>
+			<!-- <td><a href="delete_terminate.php?hapus=<?php echo $output[0];?>" class="btn btn-app btn-danger btn-sm"><i class="ace-icon fa fa-trash-o bigger-200"></i> Hapus</a></td> -->
 		</tr>
 	
 
@@ -102,4 +102,6 @@ $db_connection = pg_connect("host=172.18.0.245 dbname=postgres user=postgres pas
 ?>	
 
 </table>
+</body>
 </form>
+</html>

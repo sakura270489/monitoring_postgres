@@ -1,6 +1,6 @@
 <?php
 
-$db_connection = pg_connect("host=172.18.1.233 dbname=esuratmerdeka user=postgres password=!TakonAe.Juan");
+    $db_connection = pg_connect("host=172.18.0.44 dbname=wdh_2020 user=postgres password=dba.surabaya@2020");
 
 ?>
 
@@ -14,14 +14,14 @@ $db_connection = pg_connect("host=172.18.1.233 dbname=esuratmerdeka user=postgre
 							</li>
 
 							<li>
-								<a href="#">Esurat</a>
+								<a href="#">WDH</a>
 							</li>
 							<li class="active">Monitoring Size</li>
 						</ul><!-- /.breadcrumb -->
 	</div>
 	<div class="page-header">
         <h1>
-            Monitoring Esurat
+            Monitoring WDH
         </h1>
     </div>
 	<div class="content-panel">

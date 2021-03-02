@@ -1,10 +1,15 @@
+<?php
+
+  session_start();
+
+?>
 <!--header start-->
     <header class="header black-bg">
       <div class="sidebar-toggle-box">
         <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
       </div>
       <!--logo start-->
-      <a href="index.html" class="logo"><b>Monitoring Database Postgres</b></a>
+      <a href="home.php?halaman=selamat_datang" class="logo"><b>Monitoring Database Postgres</b></a>
       <!--logo end-->
       <div class="nav notify-row" id="top_menu">
         <!--  notification start -->
@@ -193,7 +198,17 @@
       </div>
       <div class="top-menu">
         <ul class="nav pull-right top-menu">
-          <li><a class="logout" href="login.html">Logout</a></li>
+        <?php
+          if ($_SESSION['level'] == 1) {
+              ?>
+          <li><a class="logout" href="logout.php">Logout</a></li>
+        <?php
+          }else{
+              ?>
+          <li><a class="logout" href="login.php">Login</a></li>
+        <?php
+          }
+        ?>
         </ul>
       </div>
     </header>

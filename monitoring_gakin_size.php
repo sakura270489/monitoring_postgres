@@ -35,11 +35,12 @@ $db_connection = pg_connect("host=172.18.0.245 dbname=gakin user=postgres passwo
 			<th class="detail-col">Total</th>
 			<th class="detail-col">Index </th>
 			<th class="detail-col">Table </th>
+      <th class="detail-col">Jumlah Table </th>
 		</tr>
 
 <?php
 
-    $it = "SELECT *, pg_size_pretty(total_bytes) AS total, pg_size_pretty(index_bytes) AS INDEX, pg_size_pretty(toast_bytes) AS toast, pg_size_pretty(table_bytes) AS TABLE FROM (SELECT *, total_bytes-index_bytes-COALESCE(toast_bytes,0) AS table_bytes FROM (SELECT c.oid,nspname AS table_schema, relname AS TABLE_NAME, c.reltuples AS row_estimate, pg_total_relation_size(c.oid) AS total_bytes, pg_indexes_size(c.oid) AS index_bytes, pg_total_relation_size(reltoastrelid) AS toast_bytes FROM pg_class c LEFT JOIN pg_namespace n ON n.oid = c.relnamespace WHERE relkind = 'r' and nspname not in ('pg_catalog')) a) a order by a.table_schema asc ";
+    $it = "SELECT *, pg_size_pretty(total_bytes) AS total, pg_size_pretty(index_bytes) AS INDEX, pg_size_pretty(toast_bytes) AS toast, pg_size_pretty(table_bytes) AS TABLE FROM (SELECT *, total_bytes-index_bytes-COALESCE(toast_bytes,0) AS table_bytes FROM (SELECT c.oid,nspname AS table_schema, relname AS TABLE_NAME, c.reltuples AS row_estimate, pg_total_relation_size(c.oid) AS total_bytes, pg_indexes_size(c.oid) AS index_bytes, pg_total_relation_size(reltoastrelid) AS toast_bytes FROM pg_class c LEFT JOIN pg_namespace n ON n.oid = c.relnamespace WHERE relkind = 'r' and nspname not in ('pg_catalog', 'information_schema')) a) a order by a.table_schema, a.table_name asc ";
 
     $result = pg_query($db_connection, $it);
     while($output = pg_fetch_row($result)){
@@ -53,6 +54,13 @@ $db_connection = pg_connect("host=172.18.0.245 dbname=gakin user=postgres passwo
             <td><?php echo $output[7];?></td>
             <td><?php echo $output[8];?></td>
             <td><?php echo $output[9];?></td>
+            <td><?php 
+                    $ry = 'select count(1) as jumlah from "'.$output[1].'"."'.$output[2].'"';
+                    $hasil = pg_query($db_connection, $ry);
+                    while ($po = pg_fetch_row($hasil)) {
+                      echo $po[0]."<br>";
+                    }
+                ?></td>
         </tr>
 
 <?php
