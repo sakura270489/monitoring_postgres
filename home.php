@@ -160,6 +160,7 @@
                 include_once "monitoring_apel_size.php";
               }elseif($_GET['halaman'] == "apel_user"){
                 include_once "monitoring_apel_user.php";
+<<<<<<< HEAD
               }elseif($_GET['halaman'] == "tambah_pengguna_db"){
                 include_once "insert_pengguna_db.php";
               }elseif($_GET['halaman'] == "daftar_pengguna_db"){
@@ -168,6 +169,8 @@
                 include_once "insert_db.php";
               }elseif($_GET['halaman'] == "daftar_db"){
                 include_once "daftar_db.php";
+=======
+>>>>>>> 05bf2d7f3968835433ae74784870f4db32fd8f30
               }
             
         ?>

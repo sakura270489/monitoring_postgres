@@ -56,8 +56,12 @@ $db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 passw
 
 <?php	
 	// $df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (EXTRACT(milliseconds FROM state_change - query_start)) as time_per_milliseconds from pg_stat_activity where query != ''";
+<<<<<<< HEAD
 	// $df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (state_change - query_start) as time_per_milliseconds, state from pg_stat_activity where query != ''";
 	$df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (current_timestamp - query_start) as time_per_milliseconds, state from pg_stat_activity where query != ''";
+=======
+	$df = "select pid, usename, application_name, client_addr, backend_start, query_start, wait_event_type, query, datname, state_change, (state_change - query_start) as time_per_milliseconds, state from pg_stat_activity where query != ''";
+>>>>>>> 05bf2d7f3968835433ae74784870f4db32fd8f30
 	// echo $df."<br>";
 	$result = pg_query($db_connection, $df);
 	while($output = pg_fetch_row($result)){

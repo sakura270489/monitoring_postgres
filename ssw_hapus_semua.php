@@ -8,7 +8,10 @@
 		$db_connection = pg_connect("host=172.18.1.34 dbname=garbis_sby user=egov1 password=EGOVPASS");
 	}elseif($_GET['hapus'] == "gakin"){
 		$db_connection = pg_connect("host=172.18.0.245 dbname=gakin user=postgres password=admin245");
+<<<<<<< HEAD
 		// echo $db_connection;
+=======
+>>>>>>> 05bf2d7f3968835433ae74784870f4db32fd8f30
 	}elseif($_GET['hapus'] == "bumil"){
 		$db_connection = pg_connect("host=172.18.1.191 dbname=ebumil user=postgres password=dba.surabaya@2019");
 	}elseif($_GET['hapus'] == "monev"){
@@ -61,7 +64,11 @@
 			}else if($_GET['hapus'] == "tekocak"){
 				echo "<script>location.href='home.php?halaman=monitoring_tekocak';</script>";
 			}else if($_GET['hapus'] == "gakin"){
+<<<<<<< HEAD
 				echo "<script>location.href='home.php?halaman=monitoring_gakin';</script>";
+=======
+				echo "<script>location.href='home.php?halaman=monitoring_tekocak';</script>";
+>>>>>>> 05bf2d7f3968835433ae74784870f4db32fd8f30
 			}else if($_GET['hapus'] == "bumil"){
 				echo "<script>location.href='home.php?halaman=monitoring_bumil';</script>";
 			}else if($_GET['hapus'] == "monev"){

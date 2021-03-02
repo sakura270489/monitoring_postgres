@@ -67,7 +67,11 @@ $db_connection = pg_connect("host=172.18.1.94 dbname=mon user=postgres password=
         $result = pg_query($db_connection, $yr);
         while ($hasil = pg_fetch_row($result)) {
             //echo $hasil[0]."<br>".$hasil[1];
+<<<<<<< HEAD
             // echo $hasil[0]."<br>".$hasil[1];
+=======
+            echo $hasil[0]."<br>".$hasil[1];
+>>>>>>> 05bf2d7f3968835433ae74784870f4db32fd8f30
 
 
             if ($hasil[0] == $_POST["nama"] && $hasil[1] == $_POST["password"]) {
