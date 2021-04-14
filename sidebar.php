@@ -215,12 +215,12 @@
               <span>db_94</span>
               </a>
             <ul class="sub">
-              <li><a href="home.php?halaman=monitoring_realtime_apel">Monitoring Real Time</a></li>
+              <li><a href="home.php?halaman=monitoring_realtime_94">Monitoring Real Time</a></li>
               <?php
 
                   if ($_SESSION['level'] == 1) {
                       ?>
-              <li><a href="home.php?halaman=monitoring_apel">Monitoring Aktifitas</a></li>
+              <li><a href="home.php?halaman=monitoring_94">Monitoring Aktifitas</a></li>
               <?php
                   }
               
